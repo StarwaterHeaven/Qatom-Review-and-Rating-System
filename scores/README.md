@@ -1,23 +1,41 @@
 # Scores
 
-Empty by design.
+Published summary scores for public Qatom catalog items. Summary score, grade and a
+one-line summary only — the public fields in
+[`../policy/publication.md`](../policy/publication.md). Per-check pass/fail detail and
+improvement suggestions go to the seller, not here.
 
-No score is published here until all four preconditions in
-[`../policy/publication.md`](../policy/publication.md) are met:
+| Sweep | Items | Rubric | Stage |
+|---|---|---|---|
+| [`2026-10-09-stage1.md`](2026-10-09-stage1.md) · [`.json`](2026-10-09-stage1.json) | 60 | [2.2](../rubric/rubric-v2.2.md) | 1 |
 
-1. `Human Approval Status = Approved` on the record.
-2. The free appeals and feedback item is live in the Pirate Kepler storefront.
-3. Disclosure attached where the review is not arm's length.
-4. The rubric version the score was taken against is published in this repository.
+**Stage 1** scores the listing as published. **Stage 2** calls the item and verifies the
+response against the guide; it has run on nine items so far and not across the catalog.
+Every record says which stage it is.
 
-As of the current commit, (1) and (2) are outstanding. Every record is `Pending`, and the
-appeals item is not yet live.
+## What a grade means
 
-## What will land here
+It measures how well the **listing** is built — schema present, parameters documented,
+description matching what the call returns, price disclosed, seller named. It is not an
+endorsement of the service behind the listing, and it is not investment, legal, medical or
+financial advice.
 
-One file per sweep, named `YYYY-MM-DD-stage1.json` (or `-stage2` once live-call
-verification runs), holding only the public fields from the table in the publication
-policy: item name and ID, summary score, grade, one-line summary, rubric version, date,
-stage, and the disclosure and appeal markers where they apply.
+## Disputing a score
 
-Per-check detail and improvement suggestions are not published here. They go to the seller.
+Free, through the appeals and feedback item in the Pirate Kepler storefront. See
+[`../policy/appeals.md`](../policy/appeals.md). A disputed score stays published and is
+marked as under appeal rather than being quietly pulled.
+
+Appeals about the rubric itself are in scope, not just appeals about a score.
+
+## Disclosure
+
+The reviewer is operated for Qatom. Items marked as first party or as listed by a Qatom
+team member are not arm's length, and say so on the record. See
+[`../policy/disclosure.md`](../policy/disclosure.md).
+
+## Provenance
+
+Each file is generated from the internal sweep by reducing it to the public fields, and
+every item is checked against a live catalog read-back first — an item that has gone
+private publishes nothing at all.

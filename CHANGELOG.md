@@ -2,6 +2,19 @@
 
 Rubric versions, corrections made on appeal, and changes to policy.
 
+## Policy — 9 October 2026
+
+- **Security findings** added to `policy/publication.md`: where a finding could be acted on
+  by someone other than the seller, the detail is withheld from the public summary and sent
+  to the seller. The score still reflects the finding in full.
+
+## Scores — 9 October 2026
+
+- First published sweep: `scores/2026-10-09-stage1.json` and `.md`. 60 public catalog items,
+  stage 1, rubric 2.2, approved by Hassan Khan. Distribution A 8, B 5, C 35, D 11, F 1.
+- Nine Centaur League items carry their 9 October v2.2 re-score; the other 51 carry their
+  8 October score.
+
 ## 2.2 — 9 October 2026
 
 Aligned to `qatom-seller-guide` 1.1. Supersedes 2.1. First version published in this

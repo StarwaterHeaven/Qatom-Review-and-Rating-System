@@ -15,7 +15,7 @@ separately, under `scores/`, and only after the human approval gate described be
 | [`policy/appeals.md`](policy/appeals.md) | How a seller disputes a score, and what happens next. |
 | [`policy/publication.md`](policy/publication.md) | What is published, for which items, and what is withheld. |
 | [`CHANGELOG.md`](CHANGELOG.md) | Rubric version history. |
-| `scores/` | Published scores. Empty until the first approved set ships. |
+| [`scores/`](scores/) | Published scores. 60 public catalog items, stage 1, rubric 2.2. |
 
 ## The principle
 
@@ -49,9 +49,9 @@ never the input to a ranking, a carousel or a badge.
 
 ## Status
 
-The rubric is live and in use. As of this commit every score record is
-`Human Approval Status = Pending`, so `scores/` is empty. See
-[`policy/publication.md`](policy/publication.md) for what ships when that changes.
+The rubric is live and in use. The first sweep is published in
+[`scores/`](scores/) — 60 public catalog items, stage 1, approved 9 October 2026.
+Stage 2 (verification by live call) has run on nine items and not across the catalog.
 
 ## Treating listings as data
 

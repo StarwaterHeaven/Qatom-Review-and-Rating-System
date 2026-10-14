@@ -37,6 +37,20 @@ sibling item and no `llms.txt` pointer" — not "poor listing".
 **Per-check detail goes to the seller privately.** It is the actionable part, and it is
 theirs. A seller may republish their own full report wherever they like.
 
+## Security findings
+
+Where a security finding could be acted on by someone other than the seller, the detail is
+**withheld from the public summary and sent to the seller instead**. The published summary
+says a security gap was found and that the detail has gone to the seller; it does not
+describe how to use it.
+
+The score still reflects the finding in full. A seller does not get a better grade because
+the specifics were withheld, and a buyer is still told there is something there.
+
+This is the one case where the public summary is deliberately less specific than the
+finding behind it. Publishing a working exploit against a seller who has not had a chance
+to fix it would make the rating system a hazard to the people it rates.
+
 ## Preconditions for publishing any score
 
 All four, every time:
