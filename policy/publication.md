@@ -57,8 +57,8 @@ All four, every time:
 
 1. **Human Approval Status = `Approved`** on the record. `Pending` does not publish.
    Reviewer output is never the direct input to a public surface.
-2. **The appeals route is live** — the free appeals and feedback item in the Pirate Kepler
-   storefront, per [`appeals.md`](appeals.md).
+2. **The appeals route is live**: the free "Team Kepler: feedback and help" item in the
+   Kepler Market Services store, per [`appeals.md`](appeals.md).
 3. **Disclosure attached** where the review is not arm's length, per
    [`disclosure.md`](disclosure.md).
 4. **The rubric version is published** in this repository before any score taken against
@@ -82,5 +82,5 @@ it would produce.
 
 ## Current state
 
-No scores are published. Every record is `Human Approval Status = Pending`, and the
-appeals item is not yet live. `scores/` in this repository is empty until both clear.
+Published sweeps are listed in [`../scores/README.md`](../scores/README.md), each with its
+Human Approval Status. A sweep marked `Pending` is not published.

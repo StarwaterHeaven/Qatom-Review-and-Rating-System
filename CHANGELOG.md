@@ -2,6 +2,38 @@
 
 Rubric versions, corrections made on appeal, and changes to policy.
 
+## 2.3 — 14 October 2026
+
+Aligned to `qatom-seller-guide` 1.8. Supersedes 2.2.
+
+- **Reproducible scoring.** `tools/score_stage1.py` produces every stage 1 score from a
+  catalog read-back and the reviewer's judgments. Each check now has an ID, and the rubric
+  marks which checks are automated and which are judged.
+- **Not-advice line applied mechanically.** For health, finance, investment and legal
+  items, a description without a not-advice line caps compliance at 2. The category is
+  judged; the line test is automated. This lowers the personal-finance and health
+  calculators and the Harcourt items compared with 2.2, which scored the gap more lightly.
+- **Shared prefix** may be `Brand: item` or the same leading word on every item in a store.
+- **Optional inputs** count toward `identifier_or_defaults` when described as optional;
+  subjectless items (a search, a leaderboard) are exempt.
+- **Seller responsiveness marker** (new, not scored): a billing problem unanswered for two
+  business days is stated as a fact on the public summary until the seller replies.
+- **Stage 2 additions** from guide 1.6 to 1.8: cart behaviour, links that last at least 15
+  minutes, the paid-route header guard, and a refunds statement in `llms.txt`.
+- **Resend-delivery item** (guide 1.8) is optional in the guide, so it is not scored; its
+  absence is noted in private reports.
+- **Purchase-approval threshold** removed from "not yet scored": closed in guide 1.3, and a
+  buyer's setting rather than a listing property.
+
+## Policy — 14 October 2026
+
+- Appeals route named: "Team Kepler: feedback and help", a free item in the Kepler Market
+  Services store (`policy/appeals.md`).
+- `policy/disclosure.md` lists the first-party stores by name and states that first-party
+  items are reviewed under the same rubric with a not-arm's-length note, per Hassan Khan's
+  ruling of 8 October. The earlier recusal wording, which contradicted that ruling, is
+  removed.
+
 ## Policy — 9 October 2026
 
 - **Security findings** added to `policy/publication.md`: where a finding could be acted on

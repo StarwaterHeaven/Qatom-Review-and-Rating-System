@@ -7,7 +7,8 @@ improvement suggestions go to the seller, not here.
 
 | Sweep | Items | Rubric | Stage |
 |---|---|---|---|
-| [`2026-10-09-stage1.md`](2026-10-09-stage1.md) · [`.json`](2026-10-09-stage1.json) | 60 | [2.2](../rubric/rubric-v2.2.md) | 1 |
+| [`2026-10-14-stage1.md`](2026-10-14-stage1.md) · [`.json`](2026-10-14-stage1.json) | 68 | [2.3](../rubric/rubric-v2.3.md) | 1 |
+| [`2026-10-09-stage1.md`](2026-10-09-stage1.md) · [`.json`](2026-10-09-stage1.json) | 60 | [2.2](../rubric/rubric-v2.2.md) | 1 (superseded) |
 
 **Stage 1** scores the listing as published. **Stage 2** calls the item and verifies the
 response against the guide; it has run on nine items so far and not across the catalog.
@@ -22,7 +23,8 @@ financial advice.
 
 ## Disputing a score
 
-Free, through the appeals and feedback item in the Pirate Kepler storefront. See
+Free, through "Team Kepler: feedback and help" in the Kepler Market Services store, with
+`topic: "rating"` and the `item_id`. See
 [`../policy/appeals.md`](../policy/appeals.md). A disputed score stays published and is
 marked as under appeal rather than being quietly pulled.
 
@@ -36,6 +38,6 @@ team member are not arm's length, and say so on the record. See
 
 ## Provenance
 
-Each file is generated from the internal sweep by reducing it to the public fields, and
-every item is checked against a live catalog read-back first — an item that has gone
-private publishes nothing at all.
+From 14 October each file is produced by [`../tools/score_stage1.py`](../tools/score_stage1.py)
+from a catalog read-back (only public items are scored) and the reviewer's judgments. The
+9 October file was produced by `tools/make_public_scores.py` from the internal sweep.

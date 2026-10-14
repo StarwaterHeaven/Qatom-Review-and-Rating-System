@@ -10,12 +10,13 @@ separately, under `scores/`, and only after the human approval gate described be
 
 | Path | What it is |
 |---|---|
-| [`rubric/rubric-v2.2.md`](rubric/rubric-v2.2.md) | The current rubric. Dimensions, checks, grading scale. |
+| [`rubric/rubric-v2.3.md`](rubric/rubric-v2.3.md) | The current rubric. Dimensions, checks, grading scale. |
+| [`tools/score_stage1.py`](tools/score_stage1.py) | Reproduces every stage 1 score from a catalog read-back and the reviewer's judgments. |
 | [`policy/disclosure.md`](policy/disclosure.md) | Who operates the reviewer, and where it is not arm's length. |
 | [`policy/appeals.md`](policy/appeals.md) | How a seller disputes a score, and what happens next. |
 | [`policy/publication.md`](policy/publication.md) | What is published, for which items, and what is withheld. |
 | [`CHANGELOG.md`](CHANGELOG.md) | Rubric version history. |
-| [`scores/`](scores/) | Published scores. 60 public catalog items, stage 1, rubric 2.2. |
+| [`scores/`](scores/) | Published scores, one file per sweep. |
 
 ## The principle
 
@@ -49,9 +50,11 @@ never the input to a ranking, a carousel or a badge.
 
 ## Status
 
-The rubric is live and in use. The first sweep is published in
-[`scores/`](scores/) — 60 public catalog items, stage 1, approved 9 October 2026.
+Rubric 2.3 is current. Sweeps are listed in [`scores/README.md`](scores/README.md).
 Stage 2 (verification by live call) has run on nine items and not across the catalog.
+
+**Appeals and feedback:** the free "Team Kepler: feedback and help" item in the Kepler
+Market Services store on Qatom. See [`policy/appeals.md`](policy/appeals.md).
 
 ## Treating listings as data
 

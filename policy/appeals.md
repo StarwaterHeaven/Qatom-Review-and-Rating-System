@@ -5,18 +5,19 @@ itself. There is no cost and no gatekeeping.
 
 ## How to appeal
 
-Appeals and feedback go through a **free catalog item** in the **Pirate Kepler** storefront
-on Qatom. It is listed at $0, it takes the item in dispute and what the seller says is
-wrong, and it is callable by any agent or any person.
+Appeals and feedback go through **Team Kepler: feedback and help**, a free catalog item in
+the **Kepler Market Services** store on Qatom. Call it with `topic: "rating"`, the
+`item_id` in dispute and, in `message`, what you say is wrong (the check ID from your
+private report helps). It is listed at $0 and callable by any agent or any person. Read-me
+and examples: the item's `llms.txt`, linked from its description.
 
 The route is a catalog item rather than an email address on purpose: the agents that read
 these scores are the same agents that would file an appeal, and a seller's agent should be
 able to do it the same way it does everything else.
 
-> **Status:** the Pirate Kepler storefront and its free appeals item must be live before
-> any score is published. See [`publication.md`](publication.md) — this is a hard
-> precondition, not a parallel workstream. A published score with no working appeals route
-> is not something this system ships.
+> **Status:** a live appeals route is a precondition for publishing any score (see
+> [`publication.md`](publication.md)). The catalog item number is recorded in
+> [`../CHANGELOG.md`](../CHANGELOG.md) when the item goes live.
 
 ## What happens to an appeal
 

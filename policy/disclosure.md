@@ -7,14 +7,18 @@ The reviewer is not an independent third party, and this repository does not cla
 
 ## Where reviews are not arm's length
 
-Some stores in the Qatom catalog are first party. **Centaur League** is one. Reviews of
-first-party stores are not arm's length, and every published score for a first-party item
-carries that note alongside it.
+Some stores in the Qatom catalog are first party: run by Qatom, by its founders or by the
+Kepler agents. As of 14 October 2026 they are **Centaur League Game Studios**, **Qatom
+Demo**, **Qatom Logistics Demo**, **Dobox** and **Kepler Market Services** (the reviewer's
+own store). Items listed by a Qatom team member in their own name, such as Matthew Mihok's,
+are not arm's length either. Sellers who are Qatom commercial customers, such as Harcourt
+Capital Services, are named as such.
 
-Where the reviewer's operator has a commercial interest in a listing, the reviewer
-**recuses** and the item is scored by a different reviewer or held unscored. Recusal is
-recorded on the item, not omitted silently — an item with no score and no explanation is
-indistinguishable from an item that failed.
+First-party items are reviewed under the same rubric, by the same automated checks, and are
+not held back or scored more gently. Every published score for one carries a
+not-arm's-length note beside it. An appeal about a first-party score, or about the
+reviewer's own conflict of interest, is decided by a person, not by the reviewer (see
+[`appeals.md`](appeals.md)).
 
 ## What this means for a score
 
