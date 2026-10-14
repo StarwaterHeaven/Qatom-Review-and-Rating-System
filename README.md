@@ -17,6 +17,8 @@ separately, under `scores/`, and only after the human approval gate described be
 | [`policy/publication.md`](policy/publication.md) | What is published, for which items, and what is withheld. |
 | [`CHANGELOG.md`](CHANGELOG.md) | Rubric version history. |
 | [`scores/`](scores/) | Published scores, one file per sweep. |
+| [`docs/index.html`](docs/index.html) | The public, searchable ratings page (GitHub Pages: https://starwaterheaven.github.io/Qatom-Review-and-Rating-System/). Built by `tools/make_ratings_page.py` from the newest approved sweep. |
+| [`skills/qatom-rating-guide/`](skills/qatom-rating-guide/SKILL.md) | Agent skill for sellers and buyers: how a rating works, what each check ID means, how to raise a score and how to appeal. |
 
 ## The principle
 

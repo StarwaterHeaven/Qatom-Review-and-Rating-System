@@ -25,6 +25,13 @@ Aligned to `qatom-seller-guide` 1.8. Supersedes 2.2.
 - **Purchase-approval threshold** removed from "not yet scored": closed in guide 1.3, and a
   buyer's setting rather than a listing property.
 
+## Published — 14 October 2026
+
+- 14 October sweep approved by Hassan Khan and published: 68 public items, stage 1, rubric
+  2.3. Distribution A 14 · B 7 · C 23 · D 23 · F 1. Supersedes the 9 October sweep.
+- Public ratings page (`docs/index.html`, GitHub Pages) and the seller-facing
+  `qatom-rating-guide` skill (v1.0) published.
+
 ## Policy — 14 October 2026
 
 - **Appeals route live:** catalog item #194, "Team Kepler: feedback and help", a free item

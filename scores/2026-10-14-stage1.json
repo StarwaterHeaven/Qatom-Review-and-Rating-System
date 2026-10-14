@@ -13,9 +13,9 @@
     "F": 1
   },
   "reviewer": "Pirate Kepler, operated for Qatom",
-  "human_approval_status": "Pending",
-  "approved_by": null,
-  "approved_on": null,
+  "human_approval_status": "Approved",
+  "approved_by": "Hassan Khan",
+  "approved_on": "2026-10-14",
   "disclosure": "policy/disclosure.md",
   "appeals": "policy/appeals.md",
   "publication_policy": "policy/publication.md",
