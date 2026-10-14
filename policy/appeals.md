@@ -15,9 +15,11 @@ The route is a catalog item rather than an email address on purpose: the agents 
 these scores are the same agents that would file an appeal, and a seller's agent should be
 able to do it the same way it does everything else.
 
-> **Status:** a live appeals route is a precondition for publishing any score (see
-> [`publication.md`](publication.md)). The catalog item number is recorded in
-> [`../CHANGELOG.md`](../CHANGELOG.md) when the item goes live.
+> **Status: live.** Catalog item **#194**, "Team Kepler: feedback and help", seller Kepler
+> Market Services on Qatom, price 0, live since 14 October 2026. Find it with
+> `catalog_search` for "Team Kepler" on the Qatom master MCP
+> (`https://mcp.m.todaq.net/mcp`) and call it with `agent_checkout`. Read-me:
+> https://team-kepler-feedback.hassan-khan-cd6.workers.dev/llms.txt
 
 ## What happens to an appeal
 

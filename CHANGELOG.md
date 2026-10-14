@@ -27,8 +27,9 @@ Aligned to `qatom-seller-guide` 1.8. Supersedes 2.2.
 
 ## Policy — 14 October 2026
 
-- Appeals route named: "Team Kepler: feedback and help", a free item in the Kepler Market
-  Services store (`policy/appeals.md`).
+- **Appeals route live:** catalog item #194, "Team Kepler: feedback and help", a free item
+  in the Kepler Market Services on Qatom store (`policy/appeals.md`). Tested through the
+  master MCP on 14 October (reference TKF-20261014-7D503ADF).
 - `policy/disclosure.md` lists the first-party stores by name and states that first-party
   items are reviewed under the same rubric with a not-arm's-length note, per Hassan Khan's
   ruling of 8 October. The earlier recusal wording, which contradicted that ruling, is
