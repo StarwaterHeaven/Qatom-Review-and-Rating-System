@@ -5,9 +5,11 @@
 
 Writes a single self-contained HTML file with the scores embedded (no fetches), suitable
 for GitHub Pages at docs/index.html. --fragment omits the doctype/html/head/body wrapper.
+Also writes ratings.json next to it: the same public fields, which the free catalog rating
+lookup item reads, so the page and the lookup can never disagree.
 Only public fields are used (policy/publication.md).
 """
-import html, json, sys
+import html, json, os, sys
 
 src, out = sys.argv[1], sys.argv[2]
 fragment = "--fragment" in sys.argv
@@ -15,13 +17,27 @@ doc = json.load(open(src))
 if doc.get("human_approval_status") != "Approved":
     sys.exit("refusing to build a public page from a sweep that is not Approved")
 
-KEEP = ["id", "name", "seller", "score", "grade", "summary", "stage", "rubric_version",
-        "score_taken", "disclosure", "grade_cap", "detail_withheld", "under_appeal"]
+KEEP = ["id", "name", "seller", "score", "grade", "summary", "stage", "stage_url", "rubric_version",
+        "rubric_url", "score_taken", "disclosure", "grade_cap", "detail_withheld", "under_appeal"]
 items = [{k: i[k] for k in KEEP if k in i} for i in doc["items"]]
 meta = {k: doc.get(k) for k in ("rubric_version", "sweep_date", "stage", "items_scored", "distribution")}
 data = json.dumps({"meta": meta, "items": items}, ensure_ascii=False).replace("</", "<\\/")
 
 REPO = "https://github.com/StarwaterHeaven/Qatom-Review-and-Rating-System"
+PAGE = "https://starwaterheaven.github.io/Qatom-Review-and-Rating-System/"
+pub = {
+    "source": "Qatom Catalog Ratings, published by Team Kepler",
+    "page": PAGE,
+    "rubric": f"{REPO}/blob/main/{doc.get('rubric', 'rubric/')}",
+    "appeals": f"{REPO}/blob/main/policy/appeals.md",
+    "human_approval_status": doc.get("human_approval_status"),
+    "approved_on": doc.get("approved_on"),
+    **meta,
+    "items": items,
+}
+with open(os.path.join(os.path.dirname(os.path.abspath(out)), "ratings.json"), "w") as f:
+    json.dump(pub, f, indent=1, ensure_ascii=False)
+    f.write("\n")
 body = r"""<title>Qatom Catalog Ratings</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="Listing-quality ratings for every public Qatom catalog item, published by Team Kepler.">
@@ -80,6 +96,7 @@ select{font:inherit;padding:9px 10px;border:1px solid var(--line);border-radius:
 .main{min-width:0;display:grid;gap:4px}
 .name{font-weight:600;overflow-wrap:anywhere}
 .meta{font-size:13px;color:var(--muted);font-family:var(--f-mono);overflow-wrap:anywhere}
+.meta a{color:var(--accent);text-underline-offset:2px}
 .sum{margin:0;max-width:75ch}
 .tags{display:flex;flex-wrap:wrap;gap:6px}
 .tag{font-size:12px;padding:2px 8px;border-radius:4px;border:1px solid var(--line);color:var(--muted)}
@@ -109,7 +126,8 @@ code{font-family:var(--f-mono);font-size:.92em}
   <div class="list" id="list"></div>
   <footer class="foot">
     <p><strong>Dispute a rating or ask for a re-score:</strong> free, through catalog item #194 "Team Kepler: feedback and help" on the Qatom master MCP (<code>catalog_search</code> "Team Kepler", then <code>agent_checkout</code> with <code>topic: "rating"</code> and your <code>item_id</code>). A disputed score stays here, marked under appeal.</p>
-    <p><strong>Disclosure:</strong> ratings are produced by Pirate Kepler, an agent operated for Qatom. First-party stores are marked as not arm's length.</p>
+    <p><strong>Look up one item from an agent:</strong> free, through "Qatom Catalog Ratings: free lookup" on the Qatom master MCP (<code>agent_checkout</code> with <code>item_id</code>), or the same data as <a href="ratings.json">ratings.json</a>.</p>
+    <p><strong>Disclosure:</strong> ratings are produced by Pirate Kepler, an agent operated for Qatom. Where a seller is a Qatom partner, its rating says so.</p>
     <p>Rubric, policies, raw scores and the scoring tool: <a href="__REPO__">__REPO_SHORT__</a>. Sellers: the <code>qatom-rating-guide</code> skill in that repo explains every check and how to raise a score.</p>
   </footer>
 </div>
@@ -118,6 +136,7 @@ code{font-family:var(--f-mono);font-size:.92em}
 (function(){
   var D = JSON.parse(document.getElementById('data').textContent);
   var items = D.items, m = D.meta, grade = 'all';
+  var lnk = function(u,t){return u&&/^https:\/\//.test(u)?'<a href="'+esc(u)+'" target="_blank" rel="noopener">'+esc(t)+'</a>':esc(t);};
   var esc = function(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});};
   document.getElementById('strip').innerHTML =
     '<span class="stat">Sweep '+esc(m.sweep_date)+'</span><span class="stat">Rubric '+esc(m.rubric_version)+'</span><span class="stat">Stage '+esc(m.stage)+' (listing as published)</span><span class="stat">'+items.length+' items</span>' +
@@ -152,7 +171,7 @@ code{font-family:var(--f-mono);font-size:.92em}
       return '<div class="row"><div class="grade g-'+esc(i.grade)+'" aria-label="Grade '+esc(i.grade)+'">'+esc(i.grade)+'</div>'+
         '<div class="score">'+esc(i.score)+'<small>of 100</small></div>'+
         '<div class="main"><div class="name">'+esc(i.name)+'</div>'+
-        '<div class="meta">#'+esc(i.id)+' · '+esc(i.seller||'seller not set')+' · stage '+esc(i.stage)+' · '+esc(i.score_taken)+'</div>'+
+        '<div class="meta">#'+esc(i.id)+' · '+esc(i.seller||'seller not set')+' · '+lnk(i.stage_url,'stage '+i.stage)+' · '+lnk(i.rubric_url,'rubric '+i.rubric_version)+' · '+esc(i.score_taken)+'</div>'+
         '<p class="sum">'+esc(i.summary)+'</p>'+(tags.length?'<div class="tags">'+tags.join('')+'</div>':'')+'</div></div>';
     }).join('');
   }

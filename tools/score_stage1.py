@@ -1,13 +1,16 @@
 #!/usr/bin/env python3
-"""Stage 1 scorer, rubric 2.3.
+"""Stage 1 scorer, rubric 2.4.
 
     score_stage1.py <catalog.json> <judgments.json> <out-dir> [--private <dir>]
 
 <catalog.json>   a read-back of the public catalog: Qatom master MCP `catalog_search` with
                  no query ({"items": [...], "total": n}).
-<judgments.json> the reviewer's judged values per item (rubric 2.3, checks marked "judged"):
+<judgments.json> the reviewer's judged values per item (rubric 2.4, checks marked "judged"):
                  judged_fails, listing_accuracy, seller_identity, price, security,
-                 compliance, category, functional_defect, summary, fixes.
+                 compliance, category, functional_defect, summary, fixes, and the
+                 guide 1.10 checks (wrapped_routes_closed, sensitive_item_assurance,
+                 expected_miss_ok_false: pass | fail | n/a | not_assessed;
+                 sensitive_missing: count of missing assurance elements).
 <out-dir>        writes <date>-stage1.json and <date>-stage1.md (public fields only).
 --private <dir>  also writes the per-item check detail and suggestions (seller-only).
 
@@ -20,7 +23,8 @@ file, so a re-run on the same two inputs gives the same scores.
 import json, os, re, sys
 from collections import defaultdict
 
-RUBRIC = "2.3"
+RUBRIC = "2.4"
+CHECKS_110 = ("wrapped_routes_closed", "sensitive_item_assurance", "expected_miss_ok_false")
 BUILD_CHECKS = [
     "desc_length", "desc_points_llms_txt", "names_no_individual_items", "brand_prefix_naming",
     "schema_additionalProperties_false", "inputs_described", "units_ranges_stated",
@@ -33,19 +37,23 @@ NOT_ADVICE = re.compile(
     re.I)
 NUMERIC = {"number", "integer"}
 
-# Not-arm's-length notes (policy/disclosure.md).
-FIRST_PARTY = "First-party store. This review is not arm's length."
-TEAM = "Listed by a Qatom team member. This review is not arm's length."
-CUSTOMER = "Seller is a Qatom commercial customer. Relationship disclosed; review is arm's length on the listing."
-SELLER_NOTE = {
-    "Centaur League Game Studios": FIRST_PARTY,
-    "Qatom Demo": FIRST_PARTY,
-    "Qatom Logistics Demo": FIRST_PARTY,
-    "Dobox": FIRST_PARTY,
-    "Kepler Market Services": FIRST_PARTY,
-    "Matthew Mihok": TEAM,
-    "Harcourt Capital Services Ltd": CUSTOMER,
+# Disclosure (policy/disclosure.md, format set by Hassan Khan 16 Oct 2026): a seller that is
+# not arm's length from Qatom (first-party stores, Qatom team members) carries
+# "Disclosure: <Seller Name> is a Qatom partner." Arm's-length sellers, commercial customers
+# included, carry nothing.
+PARTNERS = {
+    "Centaur League Game Studios", "Qatom Demo", "Qatom Logistics Demo", "Dobox",
+    "Kepler Market Services", "Kepler Market Services on Qatom", "Secure Secrets Exchange",
+    "Matthew Mihok",
 }
+def partner_note(name):
+    return f"Disclosure: {name} is a Qatom partner."
+
+REPO = "https://github.com/StarwaterHeaven/Qatom-Review-and-Rating-System"
+def rubric_url(v):
+    return f"{REPO}/blob/main/rubric/rubric-v{v}.md"
+def stage_url(v, stage):
+    return f"{rubric_url(v)}#5-stages"
 
 
 def grade_for(score):
@@ -100,12 +108,18 @@ def main():
     J = jdoc["items"]
     DATE = jdoc["sweep_date"]
 
+    # Items with no seller name cannot be told apart by seller. Where the reviewer has
+    # established that an unnamed item belongs to a distinct store (its own llms.txt and
+    # endpoint), the judgment sets "store" so it is not pooled with other unnamed items.
+    def store_key(it):
+        return (J.get(str(it["id"])) or {}).get("store") or seller_key(it)
+
     stores = defaultdict(list)
     for it in catalog:
-        stores[seller_key(it)].append(it)
+        stores[store_key(it)].append(it)
 
     def store_checks(it):
-        items = stores[seller_key(it)]
+        items = stores[store_key(it)]
         free = [x for x in items if float(x.get("price") or 0) == 0]
         desc = it.get("description") or ""
         is_free = float(it.get("price") or 0) == 0
@@ -122,8 +136,8 @@ def main():
         if j is None:
             missing.append(iid)
             continue
-        size = len(stores[seller_key(it)])
-        firsts = {x.get("name", "").split()[0].lower() for x in stores[seller_key(it)] if x.get("name")}
+        size = len(stores[store_key(it)])
+        firsts = {x.get("name", "").split()[0].lower() for x in stores[store_key(it)] if x.get("name")}
         b = build_checks(it, size, shared_prefix=len(firsts) == 1)
         for c in JUDGED_BUILD:
             b[c] = c not in j.get("judged_fails", [])
@@ -144,9 +158,19 @@ def main():
         if j.get("category") in ("finance", "health", "legal") and not advice_line:
             compliance = min(compliance, 2)
 
+        # Guide 1.10 checks (rubric 2.4): ceilings on Security; an expected miss answered
+        # with a non-2xx is a functional defect. "not_assessed" never lowers a score.
+        c110 = {c: j.get(c, "not_assessed") for c in CHECKS_110}
+        security = j["security"]
+        if c110["wrapped_routes_closed"] == "fail":
+            security = min(security, 2)
+        if c110["sensitive_item_assurance"] == "fail":
+            security = min(security, 3 if j.get("sensitive_missing", 1) <= 2 else 2)
+        defect = bool(j.get("functional_defect")) or c110["expected_miss_ok_false"] == "fail"
+
         dims = {
             "Build": build, "Storefront": store, "Listing accuracy": j["listing_accuracy"],
-            "Seller identity": identity, "Price sanity": price_score, "Security": j["security"],
+            "Seller identity": identity, "Price sanity": price_score, "Security": security,
             "Compliance": compliance,
         }
         score = round(sum(dims.values()) / 7 * 20)
@@ -154,13 +178,16 @@ def main():
         rec = {
             "id": iid, "name": it["name"], "seller": seller or None,
             "score": score, "grade": grade, "summary": j["summary"],
-            "stage": 1, "rubric_version": RUBRIC, "score_taken": DATE,
+            "stage": 1, "stage_url": stage_url(RUBRIC, 1),
+            "rubric_version": RUBRIC, "rubric_url": rubric_url(RUBRIC), "score_taken": DATE,
         }
-        if j.get("functional_defect") and grade == "A":
+        if defect and grade == "A":
             rec["grade"] = "B"
-        if j.get("functional_defect"):
+        if defect:
             rec["grade_cap"] = "B: functional defect observed in a live call"
-        note = SELLER_NOTE.get(seller)
+        # A judgment can name the partner where the catalog shows no seller name.
+        partner = j.get("partner_name") or (seller if seller in PARTNERS else None)
+        note = partner_note(partner) if partner else None
         if note:
             rec["disclosure"] = note
         if j.get("detail_withheld"):
@@ -173,10 +200,12 @@ def main():
             "build_checks": b, "storefront_checks": s,
             "price_floor_ok": price_ok, "not_advice_line": advice_line,
             "category": j.get("category"),
+            "guide_1_10_checks": c110,
             "failed": [c for c, ok in {**b, **s}.items() if not ok]
                       + ([] if price_ok else ["price_floor"])
                       + ([] if identity else ["seller_display_name"])
-                      + (["not_advice_line"] if j.get("category") and not advice_line else []),
+                      + (["not_advice_line"] if j.get("category") and not advice_line else [])
+                      + [c for c, v in c110.items() if v == "fail"],
             "suggestions": j.get("fixes", ""),
             "basis": j.get("basis", ""),
         })
@@ -187,7 +216,7 @@ def main():
     dist = {g: sum(r["grade"] == g for r in out) for g in "ABCDF"}
     doc = {
         "rubric_version": RUBRIC,
-        "rubric": "rubric/rubric-v2.3.md",
+        "rubric": "rubric/rubric-v2.4.md",
         "stage": 1,
         "stage_note": "Stage 1 scores the listing as published. Stage 2 verifies by live call and is not yet run across the catalog.",
         "sweep_date": DATE,
@@ -211,7 +240,7 @@ def main():
     lines = [
         f"# Stage 1 scores, {DATE}",
         "",
-        f"Rubric [{RUBRIC}](../rubric/rubric-v2.3.md) · stage 1 (listing as published) · "
+        f"Rubric [{RUBRIC}](../rubric/rubric-v{RUBRIC}.md) · [stage 1](../rubric/rubric-v{RUBRIC}.md#5-stages) (listing as published) · "
         f"{len(out)} public catalog items · Human Approval Status **{doc['human_approval_status']}**",
         "",
         "Summary score and a one-line summary, per [`../policy/publication.md`](../policy/publication.md). "
@@ -240,8 +269,8 @@ def main():
         "- A grade measures how well the **listing** is built. It is not an endorsement of the service behind it, "
         "and it is not investment, legal, medical or financial advice.",
         "- Scores are reproducible: `tools/score_stage1.py` with the catalog read-back and the reviewer's judgments.",
-        "- The reviewer is operated for Qatom. Items marked first party or listed by a Qatom team member are not "
-        "arm's length. See [`../policy/disclosure.md`](../policy/disclosure.md).",
+        "- The reviewer is operated for Qatom. Items whose seller is a Qatom partner (a first-party store or a Qatom "
+        "team member) carry a disclosure line. See [`../policy/disclosure.md`](../policy/disclosure.md).",
         "- The single-calculation listings share one unnamed seller and one set of gaps, so they share a summary.",
         "- Where a security finding could be acted on by someone other than the seller, the detail is withheld "
         "here and sent to the seller. The record says so.",

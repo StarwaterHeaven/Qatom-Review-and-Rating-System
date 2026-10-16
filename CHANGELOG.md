@@ -2,6 +2,57 @@
 
 Rubric versions, corrections made on appeal, and changes to policy.
 
+## Published — 16 October 2026
+
+- 16 October sweep approved by Hassan Khan and published: 74 public items, stage 1, rubric
+  2.4. Supersedes the 14 October sweep. Ratings page and `docs/ratings.json` rebuilt from it.
+
+## Lookup — 16 October 2026
+
+- **Free rating lookup** on Qatom: "Qatom Catalog Ratings: free lookup", in the
+  Kepler Market Services on Qatom store. Input `item_id`; returns that item's public fields,
+  the sweep and rubric, and how to appeal. An unrated item answers 200 with `ok: false` and
+  `status: "not_rated"`. Also callable directly, with no Qatom transaction, at
+  `https://team-kepler-ratings.hassan-khan-cd6.workers.dev/rating?item_id=<n>`.
+- **Public format** (Hassan Khan, 16 October): where the seller is not arm's length from
+  Qatom, the rating carries "Disclosure: <Seller Name> is a Qatom partner."; arm's-length
+  sellers, commercial customers included, carry no tag. Every rating links its stage to the
+  rubric's stage definitions and its rubric version to that rubric (`stage_url`,
+  `rubric_url`).
+- `tools/make_ratings_page.py` now writes `docs/ratings.json` beside the page. The page and
+  the lookup read the same file, so they cannot disagree. Public fields only.
+
+## Scores — 16 October 2026
+
+- `scores/2026-10-16-stage1.json` and `.md`: 74 public catalog items, stage 1, rubric 2.4.
+  Distribution A 19 · B 7 · C 24 · D 23 · F 1.
+- Six items new since 14 October: #194 (Team Kepler: feedback and help), #195 (Newsroom)
+  and #196 to #199 (Secure Secrets Exchange). The other 68 listings were unchanged against
+  the 14 October read-back and keep their scores; none is affected by the 2.4 checks.
+- Scorer: the reviewer can place an item with no seller name in its own store (judgment
+  field `store`, reason recorded), so it is not pooled with other unnamed items for the
+  storefront checks. Used for #195.
+- Item #37 is absent from the public catalog, as on 8 and 14 October, and its store's
+  `llms.txt` does not mention it. Nothing to score.
+
+## 2.4 — 16 October 2026
+
+Aligned to `qatom-seller-guide` 1.10. Supersedes 2.3.
+
+- **`wrapped_routes_closed`** (Security, judged): an item in front of software the seller
+  did not write routes only the paths it needs, and the upstream's own routes return 404
+  from outside. A fail caps Security at 2.
+- **`sensitive_item_assurance`** (Security, judged): an item that exists to handle
+  secrets, credentials or personal data publishes a `/security` threat model,
+  `security.txt` and the code that touches the data, and offers an end-to-end mode where
+  buyers can run code. A fail caps Security at 3 (one or two missing) or 2 (more).
+- **`expected_miss_ok_false`**: expected misses answer 200 with `ok: false`. A non-2xx for
+  an expected miss, seen in a live call, is a functional defect, so the grade is capped at B.
+- None of the three lowers a score while it is unassessed. Stage 1 may now read an
+  item's public pages and probe its host from outside.
+- Polling through a free direct URL (a guide 1.10 launch check) is noted privately and not
+  scored.
+
 ## 2.3 — 14 October 2026
 
 Aligned to `qatom-seller-guide` 1.8. Supersedes 2.2.

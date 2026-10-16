@@ -23,7 +23,8 @@ publicly has not opted into anything.
 | Rubric version the score was taken against | Yes |
 | Date the score was taken | Yes |
 | Stage (1 = listing only, 2 = verified by live call) | Yes |
-| First-party / not-arm's-length note, where it applies | Yes |
+| Disclosure line ("Disclosure: <Seller Name> is a Qatom partner."), where the seller is not arm's length | Yes |
+| Links to the stage definition and the rubric version | Yes |
 | Under-appeal marker, where it applies | Yes |
 | Seller's right-of-reply text, where submitted | Yes |
 | Per-check pass/fail detail | No — seller only |

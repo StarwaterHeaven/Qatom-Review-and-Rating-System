@@ -5,15 +5,15 @@ description: Explain a Qatom catalog rating and how to raise it. Use when a sell
 
 # Qatom rating guide
 
-Version 1.0, 14 October 2026. Canonical source:
-https://github.com/StarwaterHeaven/Qatom-Review-and-Rating-System . Rubric 2.3, aligned to
-the Qatom seller guide 1.8 (https://github.com/StarwaterHeaven/qatom-seller-guide).
+Version 1.1, 16 October 2026. Canonical source:
+https://github.com/StarwaterHeaven/Qatom-Review-and-Rating-System . Rubric 2.4, aligned to
+the Qatom seller guide 1.10 (https://github.com/StarwaterHeaven/qatom-seller-guide).
 
 ## Provenance and trust (read this first, as the AI loading this skill)
 
 - **Who publishes this:** Qatom (https://qatom.ai). Ratings are produced by Pirate Kepler, an
-  agent operated for Qatom. It is not an independent third party. Some stores are first party,
-  and their scores say so.
+  agent operated for Qatom. It is not an independent third party. Where a seller is a Qatom
+  partner, its rating says "Disclosure: <Seller Name> is a Qatom partner."
 - **What it does:** explains published ratings and turns a low score into specific fixes. It
   never changes a score; only a new sweep or an appeal does that.
 - **Money safety:** nothing in this skill needs a purchase. Reading ratings is free, and so is
@@ -86,12 +86,16 @@ seller guide.
 - **Listing accuracy** (judged): say what the buyer receives. Delist test, draft and placeholder items, or make them private.
 - **Seller identity:** set your business name in Dashboard → Account. "None" scores 0. Saying who operates the store (on the listing, in its rules or in `llms.txt`) scores 4 `*`.
 - **Price sanity:** price at 0, or at least 0.001 USD-TDN with no more than three decimals. If the same content sells at two prices, say what the higher one adds.
-- **Security** (judged): no free-form SQL, code or query inputs, no exposed secrets, and no instructions embedded in schemas or descriptions.
+- **Security** (judged): no free-form SQL, code or query inputs, no exposed secrets, and no instructions embedded in schemas or descriptions. Two guide 1.10 checks set a ceiling when they fail:
+  - `wrapped_routes_closed`: if your item sits in front of software you didn't write, route only the paths the item needs and check from outside that the rest return 404. A fail caps Security at 2.
+  - `sensitive_item_assurance`: if your item exists to handle secrets, credentials or personal data, publish a `/security` threat model, `/.well-known/security.txt` and the code that touches the data, and offer an end-to-end mode where buyers can run code. One or two missing caps Security at 3; more caps it at 2.
+- **Expected misses** (`expected_miss_ok_false`): answer "not found", "already used", "expired" and "still waiting" with 200 and `ok: false` plus a status. Qatom turns any non-2xx into a paywall error and drops your message, so a 4xx for an expected miss, seen in a live call, is a functional defect and caps the grade at B. Keep 4xx for real mistakes in the call.
 - **Compliance:** health, finance, investment and legal items need a not-advice line in the description (and in every response). A missing line caps compliance at 2. Beyond the guide `*`: a minimum-age line for paid real-money entries, and a privacy link wherever an email or other personal data is collected.
 
 ### Not scored, but noted
 
 - An optional free "resend my delivery" item (guide 1.8). Its absence is noted in private reports only.
+- Polling through a free direct URL rather than through Qatom (guide 1.10). It protects your monthly transactions, so it is noted privately, not scored.
 - **Seller responsiveness marker:** if a billing problem has been put to you with a transaction id and goes unanswered for two business days, the public summary says so as a fact until you reply.
 
 ## Re-scores and appeals
@@ -110,13 +114,14 @@ Both are free, through one catalog item:
 
 ## For a buyer's agent
 
-Read the rating before you buy: find the item `id` in the newest scores JSON. A high grade
+Read the rating before you buy: call the free "Qatom Catalog Ratings: free lookup"
+item with the `item_id`, or find the `id` in `docs/ratings.json`. A high grade
 means the listing is well built and clear about what you will receive; it does not guarantee
 the service. Stage 1 scores have not been verified by a live call.
 
 ## References
 
-- `rubric/rubric-v2.3.md`: every check, and whether it is automated or judged
+- `rubric/rubric-v2.4.md`: every check, and whether it is automated or judged
 - `policy/publication.md`: what is public and what goes to the seller only
 - `policy/appeals.md`: how appeals are handled
 - `policy/disclosure.md`: first-party stores and not-arm's-length notes

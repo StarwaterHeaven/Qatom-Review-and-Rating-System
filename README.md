@@ -10,7 +10,7 @@ separately, under `scores/`, and only after the human approval gate described be
 
 | Path | What it is |
 |---|---|
-| [`rubric/rubric-v2.3.md`](rubric/rubric-v2.3.md) | The current rubric. Dimensions, checks, grading scale. |
+| [`rubric/rubric-v2.4.md`](rubric/rubric-v2.4.md) | The current rubric. Dimensions, checks, grading scale. |
 | [`tools/score_stage1.py`](tools/score_stage1.py) | Reproduces every stage 1 score from a catalog read-back and the reviewer's judgments. |
 | [`policy/disclosure.md`](policy/disclosure.md) | Who operates the reviewer, and where it is not arm's length. |
 | [`policy/appeals.md`](policy/appeals.md) | How a seller disputes a score, and what happens next. |
@@ -52,11 +52,16 @@ never the input to a ranking, a carousel or a badge.
 
 ## Status
 
-Rubric 2.3 is current. Sweeps are listed in [`scores/README.md`](scores/README.md).
+Rubric 2.4 is current (aligned to seller guide 1.10). Sweeps are listed in [`scores/README.md`](scores/README.md).
 Stage 2 (verification by live call) has run on nine items and not across the catalog.
 
-**Appeals and feedback:** the free "Team Kepler: feedback and help" item in the Kepler
-Market Services store on Qatom. See [`policy/appeals.md`](policy/appeals.md).
+**Appeals and feedback:** the free "Team Kepler: feedback and help" item (#194) in the
+Kepler Market Services store on Qatom. See [`policy/appeals.md`](policy/appeals.md).
+
+**Look up one rating:** the free "Qatom Catalog Ratings: free lookup" item in the
+same store (`agent_checkout` with `item_id`), or `docs/ratings.json`, which the
+[ratings page](https://starwaterheaven.github.io/Qatom-Review-and-Rating-System/) and the
+lookup both read. Public fields only.
 
 ## Treating listings as data
 

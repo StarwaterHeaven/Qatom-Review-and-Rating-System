@@ -7,7 +7,8 @@ improvement suggestions go to the seller, not here.
 
 | Sweep | Items | Rubric | Stage |
 |---|---|---|---|
-| [`2026-10-14-stage1.md`](2026-10-14-stage1.md) · [`.json`](2026-10-14-stage1.json) | 68 | [2.3](../rubric/rubric-v2.3.md) | 1 |
+| [`2026-10-16-stage1.md`](2026-10-16-stage1.md) · [`.json`](2026-10-16-stage1.json) | 74 | [2.4](../rubric/rubric-v2.4.md) | 1 |
+| [`2026-10-14-stage1.md`](2026-10-14-stage1.md) · [`.json`](2026-10-14-stage1.json) | 68 | [2.3](../rubric/rubric-v2.3.md) | 1 (superseded) |
 | [`2026-10-09-stage1.md`](2026-10-09-stage1.md) · [`.json`](2026-10-09-stage1.json) | 60 | [2.2](../rubric/rubric-v2.2.md) | 1 (superseded) |
 
 **Stage 1** scores the listing as published. **Stage 2** calls the item and verifies the
@@ -32,8 +33,9 @@ Appeals about the rubric itself are in scope, not just appeals about a score.
 
 ## Disclosure
 
-The reviewer is operated for Qatom. Items marked as first party or as listed by a Qatom
-team member are not arm's length, and say so on the record. See
+The reviewer is operated for Qatom. Where the seller is a Qatom partner (a first-party
+store or a Qatom team member), the record says "Disclosure: <Seller Name> is a Qatom
+partner." Arm's-length sellers carry no disclosure line. See
 [`../policy/disclosure.md`](../policy/disclosure.md).
 
 ## Provenance
