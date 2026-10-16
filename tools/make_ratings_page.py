@@ -38,112 +38,175 @@ pub = {
 with open(os.path.join(os.path.dirname(os.path.abspath(out)), "ratings.json"), "w") as f:
     json.dump(pub, f, indent=1, ensure_ascii=False)
     f.write("\n")
+HERE = os.path.dirname(os.path.abspath(__file__))
+# Brand OS assets: placed lockup artwork (Susana Khan's 19 Sep 2026 set, fill set to
+# currentColor so CSS gives it the approved colour) and the verdigris-field favicon.
+LOCKUP = open(os.path.join(HERE, "brand", "qatom-lockup-horizontal-currentcolor.svg")).read().strip()
+FAVICON = "data:image/svg+xml," + __import__("urllib.parse").parse.quote(
+    open(os.path.join(HERE, "brand", "qatom-favicon-verdigris.svg")).read().strip())
 body = r"""<title>Qatom Catalog Ratings</title>
-<meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="Listing-quality ratings for every public Qatom catalog item, published by Team Kepler.">
+<meta name="qatom:brand" content="Qatom color system and lockup construction, 19 Sep 2026">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="__FAVICON__">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&family=Hanken+Grotesk:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
-/* Layout: a ledger. Summary strip on top, then filter bar, then one row per catalog item. */
+/* Qatom Brand OS (current): verdigris is the one loud colour; pine and oxide are grounds;
+   cool neutrals only. Locked values from qatom-color-system.html (19 Sep 2026). */
 :root{
-  --bg:#f6f7f9; --surface:#ffffff; --ink:#151a23; --muted:#5b6474; --line:#dfe3ea;
-  --accent:#2b5bd7; --accent-ink:#ffffff;
-  --gA:#1f7a4d; --gB:#4a7f2a; --gC:#9a6b00; --gD:#b4521e; --gF:#b3261e;
-  --gA-bg:#e3f3ea; --gB-bg:#eaf3df; --gC-bg:#fbf0d6; --gD-bg:#fbe6da; --gF-bg:#fbe1df;
-  --f-body:"Figtree",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
-  --f-mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  --q-verd:#33BAA6; --q-verd-deep:#278A7F; --q-verd-bright:#79D2C5;
+  --q-pine:#0C1A17; --q-oxide:#1C4B4B; --q-white:#FFFFFF; --q-paper:#FBFDFC; --q-mist:#F2F7F4; --q-coolgrey:#EEF3F1;
+  --q-ink:#1E2B27; --q-ink-soft:#5B6A63;
+  --bg:var(--q-paper); --surface:var(--q-white); --panel:var(--q-mist); --ink:var(--q-ink); --muted:var(--q-ink-soft);
+  --line:rgba(30,43,39,0.12); --link:var(--q-oxide); --eyebrow:var(--q-verd-deep);
+  --chip-on-bg:var(--q-verd); --chip-on-ink:var(--q-pine);
+  --gA-bg:var(--q-verd); --gA-ink:var(--q-pine);
+  --gB-bg:#BFE7E0; --gB-ink:var(--q-pine);
+  --gC-bg:var(--q-mist); --gC-ink:var(--q-oxide);
+  --gD-bg:var(--q-coolgrey); --gD-ink:var(--q-ink-soft);
+  --gF-bg:transparent; --gF-ink:var(--q-ink);
+  --f-display:"Source Serif 4",Georgia,serif;
+  --f-sans:"Hanken Grotesk","Segoe UI",system-ui,sans-serif;
+  --f-mono:"IBM Plex Mono",Consolas,ui-monospace,monospace;
+  color-scheme:light;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#0f131a; --surface:#161b24; --ink:#e7ebf2; --muted:#9aa4b5; --line:#283040;
-  --accent:#7aa2ff; --accent-ink:#0f131a;
-  --gA:#6fd3a0; --gB:#a6d37a; --gC:#e8c25a; --gD:#f09a6a; --gF:#ff8a80;
-  --gA-bg:#163326; --gB-bg:#22301a; --gC-bg:#352b12; --gD-bg:#3a2216; --gF-bg:#3d1b19;
+  --bg:var(--q-pine); --surface:#12241F; --panel:#12241F; --ink:var(--q-mist); --muted:rgba(242,247,244,0.72);
+  --line:rgba(242,247,244,0.16); --link:var(--q-verd-bright); --eyebrow:var(--q-verd-bright);
+  --gB-bg:#2A5E57; --gB-ink:var(--q-mist); --gC-bg:var(--q-oxide); --gC-ink:var(--q-mist);
+  --gD-bg:#1A2B27; --gD-ink:rgba(242,247,244,0.78); --gF-ink:var(--q-mist);
   color-scheme:dark}}
 :root[data-theme="dark"]{
-  --bg:#0f131a; --surface:#161b24; --ink:#e7ebf2; --muted:#9aa4b5; --line:#283040;
-  --accent:#7aa2ff; --accent-ink:#0f131a;
-  --gA:#6fd3a0; --gB:#a6d37a; --gC:#e8c25a; --gD:#f09a6a; --gF:#ff8a80;
-  --gA-bg:#163326; --gB-bg:#22301a; --gC-bg:#352b12; --gD-bg:#3a2216; --gF-bg:#3d1b19;
+  --bg:var(--q-pine); --surface:#12241F; --panel:#12241F; --ink:var(--q-mist); --muted:rgba(242,247,244,0.72);
+  --line:rgba(242,247,244,0.16); --link:var(--q-verd-bright); --eyebrow:var(--q-verd-bright);
+  --gB-bg:#2A5E57; --gB-ink:var(--q-mist); --gC-bg:var(--q-oxide); --gC-ink:var(--q-mist);
+  --gD-bg:#1A2B27; --gD-ink:rgba(242,247,244,0.78); --gF-ink:var(--q-mist);
   color-scheme:dark}
 *{box-sizing:border-box}
-body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.5}
-.wrap{max-width:1080px;margin:0 auto;padding-block:32px 56px;
-  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
-  display:grid;gap:24px}
-header{display:grid;gap:8px}
-.eyebrow{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
-h1{font-size:clamp(26px,4vw,36px);line-height:1.15;margin:0;font-weight:700;text-wrap:balance}
-.lede{margin:0;color:var(--muted);max-width:68ch}
-.lede a,.foot a{color:var(--accent)}
-.strip{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
-.stat{font-family:var(--f-mono);font-size:13px;color:var(--muted);padding:6px 10px;border:1px solid var(--line);border-radius:6px;background:var(--surface)}
-.bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
-.bar input[type=search]{flex:1 1 260px;min-width:0;font:inherit;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink)}
-.bar input:focus-visible,.chip:focus-visible,select:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.6 var(--f-sans)}
+b,strong{font-weight:500}
+a{color:var(--link);text-decoration-color:var(--q-verd);text-decoration-thickness:2px;text-underline-offset:3px}
+a:hover{text-decoration-color:currentColor}
+:where(a,button,input,select):focus-visible{outline:2px solid var(--link);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1060px;margin:0 auto;padding-inline:max(16px,env(safe-area-inset-left,0px)) max(16px,env(safe-area-inset-right,0px))}
+@media (min-width:720px){.wrap{padding-inline:clamp(24px,5vw,56px)}}
+
+/* Hero: the signature pairing, verdigris on near-black. */
+.hero{background:var(--q-pine);color:var(--q-mist);padding-block:28px clamp(44px,6vw,72px)}
+.brandbar{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:clamp(40px,6vw,64px)}
+.lockup{display:block;width:150px;height:auto;color:var(--q-verd)}
+.brandbar .by{font:500 12.5px/1 var(--f-sans);letter-spacing:.14em;text-transform:uppercase;color:var(--q-verd-bright)}
+.eyebrow{font:500 12.5px/1.2 var(--f-sans);letter-spacing:.14em;text-transform:uppercase;color:var(--eyebrow);margin:0 0 14px}
+.hero .eyebrow{color:var(--q-verd-bright)}
+h1{font:400 clamp(2.3rem,5.4vw,3.9rem)/1.08 var(--f-display);letter-spacing:-0.015em;margin:0;color:var(--q-white);text-wrap:balance}
+.lede{font-size:clamp(1.05rem,1.7vw,1.22rem);max-width:60ch;margin:18px 0 0;color:rgba(242,247,244,0.86)}
+.lede a{color:var(--q-verd-bright)}
+.strip{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
+.stat{font:400 13px/1 var(--f-mono);padding:8px 12px;border-radius:999px;border:1px solid rgba(242,247,244,0.18);color:rgba(242,247,244,0.86);font-variant-numeric:tabular-nums}
+.stat a{color:inherit}
+.stat--g{display:inline-flex;gap:8px;align-items:center}
+.stat--g i{font-style:normal;color:var(--q-verd-bright)}
+
+/* Ledger */
+main{padding-block:clamp(32px,5vw,56px) clamp(48px,7vw,88px)}
+.bar{display:grid;grid-template-columns:minmax(0,1fr);gap:12px;margin-bottom:12px}
+@media (min-width:860px){.bar{grid-template-columns:minmax(0,1fr) auto auto;align-items:end}}
+.bar label{display:block;font:500 12.5px/1.2 var(--f-sans);letter-spacing:.14em;text-transform:uppercase;color:var(--eyebrow);margin-bottom:8px}
+.bar input[type=search],.bar select{width:100%;font:400 16px/1.2 var(--f-sans);padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:var(--surface);color:var(--ink);min-height:48px}
 .chips{display:flex;gap:6px;flex-wrap:wrap}
-.chip{font:600 13px var(--f-mono);padding:7px 11px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
-.chip[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
-select{font:inherit;padding:9px 10px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink)}
-.count{font-size:13px;color:var(--muted)}
-.list{display:grid;gap:0;border:1px solid var(--line);border-radius:10px;background:var(--surface);overflow:hidden}
-.row{display:grid;grid-template-columns:56px 64px minmax(0,1fr);gap:14px;padding:14px 16px;border-top:1px solid var(--line);align-items:start}
+.chip{font:500 14px/1 var(--f-sans);min-width:44px;min-height:44px;padding:0 14px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--chip-on-bg);border-color:var(--chip-on-bg);color:var(--chip-on-ink)}
+.count{font-size:14px;color:var(--muted);margin:16px 0 10px}
+.list{border:1px solid var(--line);border-radius:20px;background:var(--surface);overflow:hidden}
+.row{display:grid;grid-template-columns:52px 64px minmax(0,1fr);gap:16px;padding:18px 20px;border-top:1px solid var(--line);align-items:start}
 .row:first-child{border-top:0}
-.grade{font:700 20px var(--f-mono);width:44px;height:44px;border-radius:8px;display:grid;place-items:center}
-.g-A{color:var(--gA);background:var(--gA-bg)}.g-B{color:var(--gB);background:var(--gB-bg)}.g-C{color:var(--gC);background:var(--gC-bg)}.g-D{color:var(--gD);background:var(--gD-bg)}.g-F{color:var(--gF);background:var(--gF-bg)}
-.score{font:600 18px var(--f-mono);font-variant-numeric:tabular-nums;padding-top:9px}
-.score small{display:block;font-size:11px;color:var(--muted);font-weight:400}
-.main{min-width:0;display:grid;gap:4px}
-.name{font-weight:600;overflow-wrap:anywhere}
-.meta{font-size:13px;color:var(--muted);font-family:var(--f-mono);overflow-wrap:anywhere}
-.meta a{color:var(--accent);text-underline-offset:2px}
-.sum{margin:0;max-width:75ch}
-.tags{display:flex;flex-wrap:wrap;gap:6px}
-.tag{font-size:12px;padding:2px 8px;border-radius:4px;border:1px solid var(--line);color:var(--muted)}
-.tag.warn{color:var(--gD);border-color:currentColor}
-.empty{padding:28px 16px;color:var(--muted)}
-.foot{font-size:13px;color:var(--muted);display:grid;gap:6px;max-width:80ch}
-.foot p{margin:0}
-code{font-family:var(--f-mono);font-size:.92em}
-@media (max-width:520px){.row{grid-template-columns:48px minmax(0,1fr)}.score{grid-column:2;padding-top:0;order:2}.main{grid-column:1 / -1;order:3}}
-@media (prefers-reduced-motion:no-preference){.chip{transition:background .15s,color .15s}}
+.grade{font:500 22px/1 var(--f-display);width:48px;height:48px;border-radius:14px;display:grid;place-items:center}
+.g-A{background:var(--gA-bg);color:var(--gA-ink)}
+.g-B{background:var(--gB-bg);color:var(--gB-ink)}
+.g-C{background:var(--gC-bg);color:var(--gC-ink);box-shadow:inset 0 0 0 1px var(--line)}
+.g-D{background:var(--gD-bg);color:var(--gD-ink);box-shadow:inset 0 0 0 1px var(--line)}
+.g-F{background:var(--gF-bg);color:var(--gF-ink);box-shadow:inset 0 0 0 1.5px currentColor}
+.score{font:500 20px/1 var(--f-sans);font-variant-numeric:tabular-nums;padding-top:6px}
+.score small{display:block;margin-top:4px;font:400 12px/1 var(--f-sans);color:var(--muted)}
+.main{min-width:0;display:grid;gap:6px}
+.name{font:500 17px/1.35 var(--f-sans);overflow-wrap:anywhere}
+.meta{font:400 13px/1.5 var(--f-mono);color:var(--muted);overflow-wrap:anywhere}
+.meta a{color:var(--link)}
+.sum{margin:0;max-width:72ch;color:var(--ink)}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:2px}
+.tag{font:400 13px/1.3 var(--f-sans);padding:4px 10px;border-radius:999px;background:var(--panel);color:var(--muted);border:1px solid var(--line)}
+.tag--note{color:var(--ink)}
+.empty{padding:32px 20px;color:var(--muted)}
+@media (max-width:560px){
+  .row{grid-template-columns:48px minmax(0,1fr);gap:12px 14px;padding:16px}
+  .score{padding-top:4px}
+  .main{grid-column:1 / -1}
+}
+
+/* Footer notes */
+.notes{margin-top:clamp(36px,5vw,56px);display:grid;gap:14px;grid-template-columns:minmax(0,1fr)}
+@media (min-width:860px){.notes{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.note{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px 22px}
+.note h2{font:400 1.25rem/1.2 var(--f-display);margin:0 0 8px}
+.note p{margin:0;font-size:15px;color:var(--muted)}
+.note code{font:400 13.5px/1 var(--f-mono);color:var(--ink)}
+footer{border-top:1px solid var(--line);padding-block:24px 40px;font:400 13px/1.6 var(--f-mono);color:var(--muted)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between}
+@media (prefers-reduced-motion:no-preference){.chip{transition:background .15s,color .15s,border-color .15s}}
 </style>
-<div class="wrap">
-  <header>
-    <div class="eyebrow">Team Kepler · Qatom catalog</div>
+<header class="hero">
+  <div class="wrap">
+    <div class="brandbar">
+      <a href="https://qatom.ai" aria-label="Qatom">__LOCKUP__</a>
+      <span class="by">Team Kepler</span>
+    </div>
+    <p class="eyebrow">Catalog ratings</p>
     <h1>Qatom Catalog Ratings</h1>
     <p class="lede">How well each public Qatom catalog item is listed: schema, description, price, seller name, storefront, security and compliance, scored against the <a href="https://github.com/StarwaterHeaven/qatom-seller-guide">seller guide</a>. A grade rates the listing, not the service behind it, and is not investment, legal, medical or financial advice.</p>
-  </header>
-  <div class="strip" id="strip"></div>
-  <div class="bar" role="search">
-    <label for="q" class="eyebrow" style="flex-basis:100%">Search items, sellers or item numbers</label>
-    <input id="q" type="search" placeholder="e.g. weather, Harcourt, 24" autocomplete="off">
-    <div class="chips" id="chips" aria-label="Filter by grade"></div>
-    <label for="sort" class="count">Sort</label>
-    <select id="sort"><option value="score">Score, high to low</option><option value="id">Item number</option><option value="seller">Seller</option></select>
+    <div class="strip" id="strip"></div>
   </div>
-  <div class="count" id="count" aria-live="polite"></div>
-  <div class="list" id="list"></div>
-  <footer class="foot">
-    <p><strong>Dispute a rating or ask for a re-score:</strong> free, through catalog item #194 "Team Kepler: feedback and help" on the Qatom master MCP (<code>catalog_search</code> "Team Kepler", then <code>agent_checkout</code> with <code>topic: "rating"</code> and your <code>item_id</code>). A disputed score stays here, marked under appeal.</p>
-    <p><strong>Look up one item from an agent:</strong> free, through "Qatom Catalog Ratings: free lookup" on the Qatom master MCP (<code>agent_checkout</code> with <code>item_id</code>), or the same data as <a href="ratings.json">ratings.json</a>.</p>
-    <p><strong>Disclosure:</strong> ratings are produced by Pirate Kepler, an agent operated for Qatom. Where a seller is a Qatom partner, its rating says so.</p>
-    <p>Rubric, policies, raw scores and the scoring tool: <a href="__REPO__">__REPO_SHORT__</a>. Sellers: the <code>qatom-rating-guide</code> skill in that repo explains every check and how to raise a score.</p>
-  </footer>
-</div>
+</header>
+<main>
+  <div class="wrap">
+    <div class="bar" role="search">
+      <div><label for="q">Search items, sellers or item numbers</label>
+        <input id="q" type="search" placeholder="e.g. weather, Harcourt, 24" autocomplete="off"></div>
+      <div><label id="glabel">Grade</label><div class="chips" id="chips" role="group" aria-labelledby="glabel"></div></div>
+      <div><label for="sort">Sort</label>
+        <select id="sort"><option value="score">Score, high to low</option><option value="id">Item number</option><option value="seller">Seller</option></select></div>
+    </div>
+    <div class="count" id="count" aria-live="polite"></div>
+    <div class="list" id="list"></div>
+    <section class="notes" aria-label="About these ratings">
+      <div class="note"><h2>Look up one item</h2><p>Free, through <b>Qatom Catalog Ratings: free lookup</b> on the Qatom master MCP (<code>agent_checkout</code> with <code>item_id</code>), or read the same data as <a href="ratings.json">ratings.json</a>.</p></div>
+      <div class="note"><h2>Dispute a rating</h2><p>Free, through catalog item #194 <b>Team Kepler: feedback and help</b> with <code>topic: "rating"</code> and your <code>item_id</code>. A disputed score stays here, marked under appeal.</p></div>
+      <div class="note"><h2>Who rates</h2><p>Ratings are produced by Pirate Kepler, an agent operated for Qatom. Where a seller is a Qatom partner, its rating says so.</p></div>
+      <div class="note"><h2>How it is scored</h2><p>Rubric, policies, raw scores and the scoring tool are public at <a href="__REPO__">__REPO_SHORT__</a>. Sellers: the <code>qatom-rating-guide</code> skill there explains every check.</p></div>
+    </section>
+  </div>
+</main>
+<footer><div class="wrap"><span>Qatom Catalog Ratings · Team Kepler</span><span id="foot-sweep"></span></div></footer>
 <script id="data" type="application/json">__DATA__</script>
 <script>
 (function(){
   var D = JSON.parse(document.getElementById('data').textContent);
   var items = D.items, m = D.meta, grade = 'all';
-  var lnk = function(u,t){return u&&/^https:\/\//.test(u)?'<a href="'+esc(u)+'" target="_blank" rel="noopener">'+esc(t)+'</a>':esc(t);};
   var esc = function(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});};
+  var lnk = function(u,t){return u&&/^https:\/\//.test(u)?'<a href="'+esc(u)+'" target="_blank" rel="noopener">'+esc(t)+'</a>':esc(t);};
+  var first = items[0] || {};
   document.getElementById('strip').innerHTML =
-    '<span class="stat">Sweep '+esc(m.sweep_date)+'</span><span class="stat">Rubric '+esc(m.rubric_version)+'</span><span class="stat">Stage '+esc(m.stage)+' (listing as published)</span><span class="stat">'+items.length+' items</span>' +
-    'ABCDF'.split('').map(function(g){return '<span class="stat">'+g+' '+((m.distribution||{})[g]||0)+'</span>';}).join('');
+    '<span class="stat">Sweep '+esc(m.sweep_date)+'</span>'+
+    '<span class="stat">'+lnk(first.rubric_url,'Rubric '+m.rubric_version)+'</span>'+
+    '<span class="stat">'+lnk(first.stage_url,'Stage '+m.stage+': listing as published')+'</span>'+
+    '<span class="stat">'+items.length+' items</span>'+
+    'ABCDF'.split('').map(function(g){return '<span class="stat stat--g"><i>'+g+'</i>'+((m.distribution||{})[g]||0)+'</span>';}).join('');
+  document.getElementById('foot-sweep').textContent = 'Sweep '+m.sweep_date+' · rubric '+m.rubric_version;
   var chips = document.getElementById('chips');
   ['all','A','B','C','D','F'].forEach(function(g){
-    var b=document.createElement('button'); b.className='chip'; b.type='button'; b.id='chip-'+g;
+    var b=document.createElement('button'); b.className='chip'; b.type='button';
     b.textContent = g==='all'?'All':g; b.setAttribute('aria-pressed', g===grade?'true':'false');
     b.onclick=function(){grade=g; Array.prototype.forEach.call(chips.children,function(c){c.setAttribute('aria-pressed', c===b?'true':'false');}); render();};
     chips.appendChild(b);
@@ -164,26 +227,26 @@ code{font-family:var(--f-mono);font-size:.92em}
     if(!rows.length){L.innerHTML='<div class="empty">No items match. Clear the search or pick another grade.</div>';return;}
     L.innerHTML=rows.map(function(i){
       var tags=[];
-      if(i.disclosure) tags.push('<span class="tag">'+esc(i.disclosure)+'</span>');
-      if(i.grade_cap) tags.push('<span class="tag warn">Grade capped at B: functional defect seen in a live call</span>');
-      if(i.detail_withheld) tags.push('<span class="tag warn">Security detail sent to the seller, not published</span>');
-      if(i.under_appeal) tags.push('<span class="tag warn">Under appeal</span>');
-      return '<div class="row"><div class="grade g-'+esc(i.grade)+'" aria-label="Grade '+esc(i.grade)+'">'+esc(i.grade)+'</div>'+
+      if(i.disclosure) tags.push('<span class="tag tag--note">'+esc(i.disclosure)+'</span>');
+      if(i.grade_cap) tags.push('<span class="tag">Grade capped at B: functional defect seen in a live call</span>');
+      if(i.detail_withheld) tags.push('<span class="tag">Security detail sent to the seller, not published</span>');
+      if(i.under_appeal) tags.push('<span class="tag">Under appeal</span>');
+      return '<article class="row"><div class="grade g-'+esc(i.grade)+'" aria-label="Grade '+esc(i.grade)+'">'+esc(i.grade)+'</div>'+
         '<div class="score">'+esc(i.score)+'<small>of 100</small></div>'+
         '<div class="main"><div class="name">'+esc(i.name)+'</div>'+
         '<div class="meta">#'+esc(i.id)+' · '+esc(i.seller||'seller not set')+' · '+lnk(i.stage_url,'stage '+i.stage)+' · '+lnk(i.rubric_url,'rubric '+i.rubric_version)+' · '+esc(i.score_taken)+'</div>'+
-        '<p class="sum">'+esc(i.summary)+'</p>'+(tags.length?'<div class="tags">'+tags.join('')+'</div>':'')+'</div></div>';
+        '<p class="sum">'+esc(i.summary)+'</p>'+(tags.length?'<div class="tags">'+tags.join('')+'</div>':'')+'</div></article>';
     }).join('');
   }
   render();
 })();
 </script>
 """
-body = body.replace("__DATA__", data).replace("__REPO__", REPO).replace("__REPO_SHORT__", REPO.replace("https://", ""))
+body = body.replace("__LOCKUP__", LOCKUP).replace("__FAVICON__", FAVICON).replace("__DATA__", data).replace("__REPO__", REPO).replace("__REPO_SHORT__", REPO.replace("https://", ""))
 if not fragment:
     body = ('<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n'
             '<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n'
-            + body.replace("<div class=\"wrap\">", "</head>\n<body>\n<div class=\"wrap\">", 1)
+            + body.replace('<header class="hero">', '</head>\n<body>\n<header class="hero">', 1)
             + "</body>\n</html>\n")
 open(out, "w").write(body)
 print(f"wrote {out}: {len(items)} items")

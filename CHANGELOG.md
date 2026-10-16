@@ -6,6 +6,9 @@ Rubric versions, corrections made on appeal, and changes to policy.
 
 - 16 October sweep approved by Hassan Khan and published: 74 public items, stage 1, rubric
   2.4. Supersedes the 14 October sweep. Ratings page and `docs/ratings.json` rebuilt from it.
+- Ratings page restyled to the current Qatom Brand OS (colour system and lockup construction,
+  19 September 2026): verdigris on pine, Source Serif 4, Hanken Grotesk and IBM Plex Mono, and
+  the placed horizontal lockup (`tools/brand/`). Content and data are unchanged.
 
 ## Lookup — 16 October 2026
 
