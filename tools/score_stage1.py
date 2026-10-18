@@ -10,7 +10,8 @@
                  compliance, category, functional_defect, summary, fixes, and the
                  guide 1.10 checks (wrapped_routes_closed, sensitive_item_assurance,
                  expected_miss_ok_false: pass | fail | n/a | not_assessed;
-                 sensitive_missing: count of missing assurance elements).
+                 sensitive_missing: count of missing assurance elements;
+                 stage: 2 where the item was checked by a live paid call, default 1).
 <out-dir>        writes <date>-stage1.json and <date>-stage1.md (public fields only).
 --private <dir>  also writes the per-item check detail and suggestions (seller-only).
 --delta          score only the items that have a judgment (a sweep of new items), while
@@ -185,7 +186,7 @@ def main():
         rec = {
             "id": iid, "name": it["name"], "seller": seller or None,
             "score": score, "grade": grade, "summary": j["summary"],
-            "stage": 1, "stage_url": stage_url(RUBRIC, 1),
+            "stage": j.get("stage", 1), "stage_url": stage_url(RUBRIC, j.get("stage", 1)),
             "rubric_version": RUBRIC, "rubric_url": rubric_url(RUBRIC), "score_taken": DATE,
         }
         if defect and grade == "A":

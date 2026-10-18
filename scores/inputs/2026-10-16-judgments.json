@@ -1,0 +1,920 @@
+{
+ "sweep_date": "2026-10-16",
+ "rubric_version": "2.4",
+ "human_approval_status": "Approved",
+ "approved_by": "Hassan Khan",
+ "approved_on": "2026-10-16",
+ "items": {
+  "2": {
+   "judged_fails": [],
+   "listing_accuracy": 1,
+   "seller_identity": 3,
+   "price": 2,
+   "security": 3,
+   "compliance": 3,
+   "category": null,
+   "functional_defect": false,
+   "summary": "Title and one-line description don't say what a buyer receives from a GET call. No output described. Reads as a demo/test listing."
+  },
+  "20": {
+   "judged_fails": [],
+   "listing_accuracy": 0,
+   "seller_identity": 0,
+   "price": 0,
+   "security": 2,
+   "compliance": 1,
+   "category": null,
+   "functional_defect": false,
+   "summary": "Placeholder: name 'asdf', seller 'asdfasdf', empty description, priced 4.000."
+  },
+  "21": {
+   "judged_fails": [],
+   "listing_accuracy": 2,
+   "seller_identity": 3,
+   "price": 3,
+   "security": 1,
+   "compliance": 2,
+   "category": "finance",
+   "functional_defect": false,
+   "summary": "Ticker typo ('APPL' for AAPL); 'the firehose' is undefined and the output is undocumented. No data source, delay or licensing disclosure. The input schema also carries a security gap; the detail has gone to the seller rather than here.",
+   "detail_withheld": "exploitable security detail withheld, sent to the seller"
+  },
+  "22": {
+   "judged_fails": [],
+   "listing_accuracy": 5,
+   "seller_identity": 3,
+   "price": 0,
+   "security": 4,
+   "compliance": 5,
+   "category": "finance",
+   "functional_defect": false,
+   "summary": "Clear, well-scoped, with a disclaimer and a good schema. Price 0.000001 USD-TDN is below the 0.001 minimum unit."
+  },
+  "24": {
+   "judged_fails": [],
+   "listing_accuracy": 5,
+   "seller_identity": 4,
+   "price": 4,
+   "security": 4,
+   "compliance": 4,
+   "category": "finance",
+   "functional_defect": false,
+   "summary": "Clear ranges, defaults, coverage link and a free published figure to check first. No not-investment-advice line in the description; the store has no free feedback item."
+  },
+  "26": {
+   "judged_fails": [],
+   "listing_accuracy": 5,
+   "seller_identity": 3,
+   "price": 5,
+   "security": 4,
+   "compliance": 5,
+   "category": null,
+   "functional_defect": false,
+   "summary": "Clear, narrow, schema tight, fair price."
+  },
+  "27": {
+   "judged_fails": [],
+   "listing_accuracy": 5,
+   "seller_identity": 3,
+   "price": 4,
+   "security": 4,
+   "compliance": 5,
+   "category": null,
+   "functional_defect": false,
+   "summary": "Strong: response fields, key expiry, 403 behaviour and public-domain source all stated. No llms.txt pointer and no free or feedback item in the store."
+  },
+  "29": {
+   "judged_fails": [],
+   "listing_accuracy": 1,
+   "seller_identity": 3,
+   "price": 3,
+   "security": 3,
+   "compliance": 3,
+   "category": null,
+   "functional_defect": false,
+   "summary": "No deliverable described."
+  },
+  "30": {
+   "judged_fails": [],
+   "listing_accuracy": 0,
+   "seller_identity": 3,
+   "price": 3,
+   "security": 3,
+   "compliance": 3,
+   "category": null,
+   "functional_defect": false,
+   "summary": "Description is the single word 'stuff'."
+  },
+  "31": {
+   "judged_fails": [],
+   "listing_accuracy": 2,
+   "seller_identity": 3,
+   "price": 2,
+   "security": 3,
+   "compliance": 2,
+   "category": null,
+   "functional_defect": false,
+   "summary": "Membership sold at 5.000 with no benefits, term, renewal or refund stated, and priced in '$5' rather than USD-TDN."
+  },
+  "32": {
+   "judged_fails": [],
+   "listing_accuracy": 5,
+   "seller_identity": 4,
+   "price": 4,
+   "security": 4,
+   "compliance": 4,
+   "category": null,
+   "functional_defect": false,
+   "summary": "Rules, payout split and refund policy all clearly stated, schema documented, affiliation disclosed. No minimum-age line for a paid real-money entry."
+  },
+  "33": {
+   "judged_fails": [],
+   "listing_accuracy": 5,
+   "seller_identity": 4,
+   "price": 4,
+   "security": 4,
+   "compliance": 4,
+   "category": null,
+   "functional_defect": false,
+   "summary": "Clearly described and documented. No minimum-age line for a paid real-money entry."
+  },
+  "34": {
+   "judged_fails": [],
+   "listing_accuracy": 5,
+   "seller_identity": 4,
+   "price": 5,
+   "security": 5,
+   "compliance": 5,
+   "category": null,
+   "functional_defect": false,
+   "summary": "Clear description, documented schema, affiliation disclosed. Nothing outstanding.",
+   "subjectless": true
+  },
+  "35": {
+   "judged_fails": [],
+   "listing_accuracy": 5,
+   "seller_identity": 4,
+   "price": 5,
+   "security": 4,
+   "compliance": 5,
+   "category": null,
+   "functional_defect": false,
+   "summary": "Clear description and documented schema, affiliation disclosed. Nothing outstanding."
+  },
+  "36": {
+   "judged_fails": [],
+   "listing_accuracy": 5,
+   "seller_identity": 4,
+   "price": 5,
+   "security": 4,
+   "compliance": 5,
+   "category": null,
+   "functional_defect": false,
+   "summary": "Clear, with sound agent-behaviour guidance. The description does not tell the buyer to keep team_token private."
+  },
+  "38": {
+   "judged_fails": [],
+   "listing_accuracy": 3,
+   "seller_identity": 4,
+   "price": 5,
+   "security": 5,
+   "compliance": 5,
+   "category": null,
+   "functional_defect": true,
+   "summary": "Grade held at B: a standings row did not follow the seller's own stated scoring rule when last called (9 October), so the published output could not be reproduced from the published rules."
+  },
+  "39": {
+   "judged_fails": [],
+   "listing_accuracy": 5,
+   "seller_identity": 4,
+   "price": 5,
+   "security": 4,
+   "compliance": 5,
+   "category": null,
+   "functional_defect": false,
+   "summary": "Free feedback channel, clearly described, with a privacy link. The privacy page states no retention period (advisory)."
+  },
+  "40": {
+   "judged_fails": [],
+   "listing_accuracy": 5,
+   "seller_identity": 4,
+   "price": 5,
+   "security": 5,
+   "compliance": 5,
+   "category": null,
+   "functional_defect": false,
+   "summary": "Clear description, documented schema, affiliation disclosed. Nothing outstanding."
+  },
+  "41": {
+   "judged_fails": [
+    "no_internal_or_pinned_fields"
+   ],
+   "listing_accuracy": 5,
+   "seller_identity": 0,
+   "price": 4,
+   "security": 4,
+   "compliance": 5,
+   "category": null,
+   "functional_defect": false,
+   "summary": "Clear one-calculation listing with documented inputs, defaults and named outputs. Seller shows 'None'. Schema carries an internal 'result_ref' field with an embedded instruction."
+  },
+  "42": {
+   "judged_fails": [
+    "no_internal_or_pinned_fields"
+   ],
+   "listing_accuracy": 5,
+   "seller_identity": 0,
+   "price": 4,
+   "security": 4,
+   "compliance": 5,
+   "category": null,
+   "functional_defect": false,
+   "summary": "Clear one-calculation listing with documented inputs, defaults and named outputs. Seller shows 'None'. Schema carries an internal 'result_ref' field with an embedded instruction."
+  },
+  "43": {
+   "judged_fails": [
+    "no_internal_or_pinned_fields"
+   ],
+   "listing_accuracy": 5,
+   "seller_identity": 0,
+   "price": 4,
+   "security": 4,
+   "compliance": 5,
+   "category": null,
+   "functional_defect": false,
+   "summary": "Clear one-calculation listing with documented inputs, defaults and named outputs. Seller shows 'None'. Schema carries an internal 'result_ref' field with an embedded instruction."
+  },
+  "44": {
+   "judged_fails": [
+    "no_internal_or_pinned_fields"
+   ],
+   "listing_accuracy": 5,
+   "seller_identity": 0,
+   "price": 4,
+   "security": 4,
+   "compliance": 5,
+   "category": null,
+   "functional_defect": false,
+   "summary": "Clear one-calculation listing with documented inputs, defaults and named outputs. Seller shows 'None'. Schema carries an internal 'result_ref' field with an embedded instruction."
+  },
+  "45": {
+   "judged_fails": [
+    "no_internal_or_pinned_fields"
+   ],
+   "listing_accuracy": 5,
+   "seller_identity": 0,
+   "price": 4,
+   "security": 4,
+   "compliance": 5,
+   "category": null,
+   "functional_defect": false,
+   "summary": "Clear one-calculation listing with documented inputs, defaults and named outputs. Seller shows 'None'. Schema carries an internal 'result_ref' field with an embedded instruction."
+  },
+  "46": {
+   "judged_fails": [
+    "no_internal_or_pinned_fields"
+   ],
+   "listing_accuracy": 5,
+   "seller_identity": 0,
+   "price": 4,
+   "security": 4,
+   "compliance": 5,
+   "category": null,
+   "functional_defect": false,
+   "summary": "Clear one-calculation listing with documented inputs, defaults and named outputs. Seller shows 'None'. Schema carries an internal 'result_ref' field with an embedded instruction."
+  },
+  "47": {
+   "judged_fails": [
+    "no_internal_or_pinned_fields"
+   ],
+   "listing_accuracy": 5,
+   "seller_identity": 0,
+   "price": 4,
+   "security": 4,
+   "compliance": 5,
+   "category": "finance",
+   "functional_defect": false,
+   "summary": "Clear one-calculation listing with documented inputs, defaults and named outputs. Seller shows 'None'. Schema carries an internal 'result_ref' field with an embedded instruction. Finance calculation with no not-advice line."
+  },
+  "48": {
+   "judged_fails": [
+    "no_internal_or_pinned_fields"
+   ],
+   "listing_accuracy": 5,
+   "seller_identity": 0,
+   "price": 4,
+   "security": 4,
+   "compliance": 5,
+   "category": null,
+   "functional_defect": false,
+   "summary": "Clear one-calculation listing with documented inputs, defaults and named outputs. Seller shows 'None'. Schema carries an internal 'result_ref' field with an embedded instruction."
+  },
+  "49": {
+   "judged_fails": [
+    "no_internal_or_pinned_fields"
+   ],
+   "listing_accuracy": 5,
+   "seller_identity": 0,
+   "price": 4,
+   "security": 4,
+   "compliance": 5,
+   "category": "finance",
+   "functional_defect": false,
+   "summary": "Clear one-calculation listing with documented inputs, defaults and named outputs. Seller shows 'None'. Schema carries an internal 'result_ref' field with an embedded instruction. Finance calculation with no not-advice line."
+  },
+  "50": {
+   "judged_fails": [
+    "no_internal_or_pinned_fields"
+   ],
+   "listing_accuracy": 5,
+   "seller_identity": 0,
+   "price": 4,
+   "security": 4,
+   "compliance": 5,
+   "category": null,
+   "functional_defect": false,
+   "summary": "Clear one-calculation listing with documented inputs, defaults and named outputs. Seller shows 'None'. Schema carries an internal 'result_ref' field with an embedded instruction."
+  },
+  "51": {
+   "judged_fails": [
+    "no_internal_or_pinned_fields"
+   ],
+   "listing_accuracy": 5,
+   "seller_identity": 0,
+   "price": 4,
+   "security": 4,
+   "compliance": 5,
+   "category": "finance",
+   "functional_defect": false,
+   "summary": "Clear one-calculation listing with documented inputs, defaults and named outputs. Seller shows 'None'. Schema carries an internal 'result_ref' field with an embedded instruction. Finance calculation with no not-advice line."
+  },
+  "52": {
+   "judged_fails": [
+    "no_internal_or_pinned_fields"
+   ],
+   "listing_accuracy": 5,
+   "seller_identity": 0,
+   "price": 4,
+   "security": 4,
+   "compliance": 5,
+   "category": "finance",
+   "functional_defect": false,
+   "summary": "Clear one-calculation listing with documented inputs, defaults and named outputs. Seller shows 'None'. Schema carries an internal 'result_ref' field with an embedded instruction. Finance calculation with no not-advice line."
+  },
+  "53": {
+   "judged_fails": [
+    "no_internal_or_pinned_fields"
+   ],
+   "listing_accuracy": 5,
+   "seller_identity": 0,
+   "price": 4,
+   "security": 4,
+   "compliance": 5,
+   "category": "finance",
+   "functional_defect": false,
+   "summary": "Clear one-calculation listing with documented inputs, defaults and named outputs. Seller shows 'None'. Schema carries an internal 'result_ref' field with an embedded instruction. Finance calculation with no not-advice line."
+  },
+  "54": {
+   "judged_fails": [
+    "no_internal_or_pinned_fields"
+   ],
+   "listing_accuracy": 5,
+   "seller_identity": 0,
+   "price": 4,
+   "security": 4,
+   "compliance": 5,
+   "category": "finance",
+   "functional_defect": false,
+   "summary": "Clear one-calculation listing with documented inputs, defaults and named outputs. Seller shows 'None'. Schema carries an internal 'result_ref' field with an embedded instruction. Finance calculation with no not-advice line."
+  },
+  "55": {
+   "judged_fails": [
+    "no_internal_or_pinned_fields"
+   ],
+   "listing_accuracy": 5,
+   "seller_identity": 0,
+   "price": 4,
+   "security": 4,
+   "compliance": 5,
+   "category": null,
+   "functional_defect": false,
+   "summary": "Clear one-calculation listing with documented inputs, defaults and named outputs. Seller shows 'None'. Schema carries an internal 'result_ref' field with an embedded instruction."
+  },
+  "56": {
+   "judged_fails": [
+    "no_internal_or_pinned_fields"
+   ],
+   "listing_accuracy": 5,
+   "seller_identity": 0,
+   "price": 4,
+   "security": 4,
+   "compliance": 5,
+   "category": "finance",
+   "functional_defect": false,
+   "summary": "Clear one-calculation listing with documented inputs, defaults and named outputs. Seller shows 'None'. Schema carries an internal 'result_ref' field with an embedded instruction. Finance calculation with no not-advice line."
+  },
+  "57": {
+   "judged_fails": [
+    "no_internal_or_pinned_fields"
+   ],
+   "listing_accuracy": 5,
+   "seller_identity": 0,
+   "price": 4,
+   "security": 4,
+   "compliance": 5,
+   "category": "finance",
+   "functional_defect": false,
+   "summary": "Clear one-calculation listing with documented inputs, defaults and named outputs. Seller shows 'None'. Schema carries an internal 'result_ref' field with an embedded instruction. Finance calculation with no not-advice line."
+  },
+  "58": {
+   "judged_fails": [
+    "no_internal_or_pinned_fields"
+   ],
+   "listing_accuracy": 5,
+   "seller_identity": 0,
+   "price": 4,
+   "security": 4,
+   "compliance": 5,
+   "category": null,
+   "functional_defect": false,
+   "summary": "Clear one-calculation listing with documented inputs, defaults and named outputs. Seller shows 'None'. Schema carries an internal 'result_ref' field with an embedded instruction."
+  },
+  "59": {
+   "judged_fails": [
+    "no_internal_or_pinned_fields"
+   ],
+   "listing_accuracy": 5,
+   "seller_identity": 0,
+   "price": 4,
+   "security": 4,
+   "compliance": 5,
+   "category": null,
+   "functional_defect": false,
+   "summary": "Clear one-calculation listing with documented inputs, defaults and named outputs. Seller shows 'None'. Schema carries an internal 'result_ref' field with an embedded instruction."
+  },
+  "60": {
+   "judged_fails": [
+    "no_internal_or_pinned_fields"
+   ],
+   "listing_accuracy": 5,
+   "seller_identity": 0,
+   "price": 4,
+   "security": 4,
+   "compliance": 5,
+   "category": null,
+   "functional_defect": false,
+   "summary": "Clear one-calculation listing with documented inputs, defaults and named outputs. Seller shows 'None'. Schema carries an internal 'result_ref' field with an embedded instruction."
+  },
+  "61": {
+   "judged_fails": [
+    "no_internal_or_pinned_fields"
+   ],
+   "listing_accuracy": 5,
+   "seller_identity": 0,
+   "price": 4,
+   "security": 4,
+   "compliance": 5,
+   "category": null,
+   "functional_defect": false,
+   "summary": "Clear one-calculation listing with documented inputs, defaults and named outputs. Seller shows 'None'. Schema carries an internal 'result_ref' field with an embedded instruction."
+  },
+  "62": {
+   "judged_fails": [
+    "no_internal_or_pinned_fields"
+   ],
+   "listing_accuracy": 5,
+   "seller_identity": 0,
+   "price": 4,
+   "security": 4,
+   "compliance": 5,
+   "category": "finance",
+   "functional_defect": false,
+   "summary": "Clear one-calculation listing with documented inputs, defaults and named outputs. Seller shows 'None'. Schema carries an internal 'result_ref' field with an embedded instruction. Finance calculation with no not-advice line."
+  },
+  "63": {
+   "judged_fails": [
+    "no_internal_or_pinned_fields"
+   ],
+   "listing_accuracy": 5,
+   "seller_identity": 0,
+   "price": 4,
+   "security": 4,
+   "compliance": 5,
+   "category": null,
+   "functional_defect": false,
+   "summary": "Clear one-calculation listing with documented inputs, defaults and named outputs. Seller shows 'None'. Schema carries an internal 'result_ref' field with an embedded instruction."
+  },
+  "64": {
+   "judged_fails": [
+    "no_internal_or_pinned_fields"
+   ],
+   "listing_accuracy": 5,
+   "seller_identity": 0,
+   "price": 4,
+   "security": 4,
+   "compliance": 5,
+   "category": null,
+   "functional_defect": false,
+   "summary": "Clear one-calculation listing with documented inputs, defaults and named outputs. Seller shows 'None'. Schema carries an internal 'result_ref' field with an embedded instruction."
+  },
+  "65": {
+   "judged_fails": [
+    "no_internal_or_pinned_fields"
+   ],
+   "listing_accuracy": 5,
+   "seller_identity": 0,
+   "price": 4,
+   "security": 4,
+   "compliance": 5,
+   "category": "finance",
+   "functional_defect": false,
+   "summary": "Clear one-calculation listing with documented inputs, defaults and named outputs. Seller shows 'None'. Schema carries an internal 'result_ref' field with an embedded instruction. Finance calculation with no not-advice line."
+  },
+  "66": {
+   "judged_fails": [
+    "no_internal_or_pinned_fields"
+   ],
+   "listing_accuracy": 5,
+   "seller_identity": 0,
+   "price": 4,
+   "security": 4,
+   "compliance": 5,
+   "category": null,
+   "functional_defect": false,
+   "summary": "Clear one-calculation listing with documented inputs, defaults and named outputs. Seller shows 'None'. Schema carries an internal 'result_ref' field with an embedded instruction."
+  },
+  "67": {
+   "judged_fails": [
+    "no_internal_or_pinned_fields"
+   ],
+   "listing_accuracy": 5,
+   "seller_identity": 0,
+   "price": 4,
+   "security": 4,
+   "compliance": 5,
+   "category": null,
+   "functional_defect": false,
+   "summary": "Clear one-calculation listing with documented inputs, defaults and named outputs. Seller shows 'None'. Schema carries an internal 'result_ref' field with an embedded instruction."
+  },
+  "68": {
+   "judged_fails": [
+    "no_internal_or_pinned_fields"
+   ],
+   "listing_accuracy": 5,
+   "seller_identity": 0,
+   "price": 4,
+   "security": 4,
+   "compliance": 5,
+   "category": null,
+   "functional_defect": false,
+   "summary": "Clear one-calculation listing with documented inputs, defaults and named outputs. Seller shows 'None'. Schema carries an internal 'result_ref' field with an embedded instruction."
+  },
+  "69": {
+   "judged_fails": [
+    "no_internal_or_pinned_fields"
+   ],
+   "listing_accuracy": 5,
+   "seller_identity": 0,
+   "price": 4,
+   "security": 4,
+   "compliance": 5,
+   "category": null,
+   "functional_defect": false,
+   "summary": "Clear one-calculation listing with documented inputs, defaults and named outputs. Seller shows 'None'. Schema carries an internal 'result_ref' field with an embedded instruction."
+  },
+  "70": {
+   "judged_fails": [
+    "no_internal_or_pinned_fields"
+   ],
+   "listing_accuracy": 5,
+   "seller_identity": 0,
+   "price": 4,
+   "security": 4,
+   "compliance": 5,
+   "category": null,
+   "functional_defect": false,
+   "summary": "Clear one-calculation listing with documented inputs, defaults and named outputs. Seller shows 'None'. Schema carries an internal 'result_ref' field with an embedded instruction."
+  },
+  "71": {
+   "judged_fails": [
+    "no_internal_or_pinned_fields"
+   ],
+   "listing_accuracy": 5,
+   "seller_identity": 0,
+   "price": 4,
+   "security": 4,
+   "compliance": 5,
+   "category": "health",
+   "functional_defect": false,
+   "summary": "Clear one-calculation listing with documented inputs, defaults and named outputs. Seller shows 'None'. Schema carries an internal 'result_ref' field with an embedded instruction. Health calculation with no not-advice line."
+  },
+  "72": {
+   "judged_fails": [
+    "no_internal_or_pinned_fields"
+   ],
+   "listing_accuracy": 5,
+   "seller_identity": 0,
+   "price": 4,
+   "security": 4,
+   "compliance": 5,
+   "category": "finance",
+   "functional_defect": false,
+   "summary": "Clear one-calculation listing with documented inputs, defaults and named outputs. Seller shows 'None'. Schema carries an internal 'result_ref' field with an embedded instruction. Finance calculation with no not-advice line."
+  },
+  "73": {
+   "judged_fails": [
+    "no_internal_or_pinned_fields"
+   ],
+   "listing_accuracy": 5,
+   "seller_identity": 0,
+   "price": 4,
+   "security": 4,
+   "compliance": 5,
+   "category": null,
+   "functional_defect": false,
+   "summary": "Clear one-calculation listing with documented inputs, defaults and named outputs. Seller shows 'None'. Schema carries an internal 'result_ref' field with an embedded instruction."
+  },
+  "74": {
+   "judged_fails": [
+    "no_internal_or_pinned_fields"
+   ],
+   "listing_accuracy": 5,
+   "seller_identity": 0,
+   "price": 4,
+   "security": 4,
+   "compliance": 5,
+   "category": "health",
+   "functional_defect": false,
+   "summary": "Clear one-calculation listing with documented inputs, defaults and named outputs. Seller shows 'None'. Schema carries an internal 'result_ref' field with an embedded instruction. Health calculation with no not-advice line."
+  },
+  "75": {
+   "judged_fails": [
+    "no_internal_or_pinned_fields"
+   ],
+   "listing_accuracy": 5,
+   "seller_identity": 0,
+   "price": 4,
+   "security": 4,
+   "compliance": 5,
+   "category": null,
+   "functional_defect": false,
+   "summary": "Clear one-calculation listing with documented inputs, defaults and named outputs. Seller shows 'None'. Schema carries an internal 'result_ref' field with an embedded instruction."
+  },
+  "76": {
+   "judged_fails": [
+    "no_internal_or_pinned_fields"
+   ],
+   "listing_accuracy": 5,
+   "seller_identity": 0,
+   "price": 4,
+   "security": 4,
+   "compliance": 5,
+   "category": "health",
+   "functional_defect": false,
+   "summary": "Clear one-calculation listing with documented inputs, defaults and named outputs. Seller shows 'None'. Schema carries an internal 'result_ref' field with an embedded instruction. Health calculation with no not-advice line."
+  },
+  "77": {
+   "judged_fails": [
+    "no_internal_or_pinned_fields"
+   ],
+   "listing_accuracy": 5,
+   "seller_identity": 0,
+   "price": 4,
+   "security": 4,
+   "compliance": 5,
+   "category": "finance",
+   "functional_defect": false,
+   "summary": "Clear one-calculation listing with documented inputs, defaults and named outputs. Seller shows 'None'. Schema carries an internal 'result_ref' field with an embedded instruction. Finance calculation with no not-advice line."
+  },
+  "78": {
+   "judged_fails": [],
+   "listing_accuracy": 5,
+   "seller_identity": 4,
+   "price": 5,
+   "security": 5,
+   "compliance": 5,
+   "category": null,
+   "functional_defect": false,
+   "summary": "Fixed-vocabulary responses limit abuse by design. Clearly described. Nothing outstanding."
+  },
+  "79": {
+   "judged_fails": [],
+   "listing_accuracy": 0,
+   "seller_identity": 4,
+   "price": 3,
+   "security": 3,
+   "compliance": 3,
+   "category": null,
+   "functional_defect": false,
+   "summary": "Empty description. Schema refers to 'open_compute_wallet', which is not in the catalog."
+  },
+  "80": {
+   "judged_fails": [],
+   "listing_accuracy": 5,
+   "seller_identity": 4,
+   "price": 4,
+   "security": 4,
+   "compliance": 5,
+   "category": null,
+   "functional_defect": false,
+   "summary": "Strong: coverage, inputs, units and data source (NOAA GFS via Weather Source) stated."
+  },
+  "180": {
+   "judged_fails": [],
+   "listing_accuracy": 0,
+   "seller_identity": 3,
+   "price": 3,
+   "security": 3,
+   "compliance": 3,
+   "category": null,
+   "functional_defect": false,
+   "summary": "Test listing ('This is an example')."
+  },
+  "181": {
+   "judged_fails": [],
+   "functional_defect": false,
+   "category": null,
+   "listing_accuracy": 5,
+   "seller_identity": 3,
+   "price": 5,
+   "security": 4,
+   "compliance": 5,
+   "summary": "Clear answer, free reference check to try first, synthetic data stated, llms.txt linked. Nothing outstanding at stage 1."
+  },
+  "182": {
+   "judged_fails": [],
+   "functional_defect": false,
+   "category": null,
+   "listing_accuracy": 5,
+   "seller_identity": 3,
+   "price": 5,
+   "security": 5,
+   "compliance": 5,
+   "summary": "Free reference check that gives away no position or ETA, as intended. Nothing outstanding."
+  },
+  "183": {
+   "judged_fails": [],
+   "functional_defect": false,
+   "category": null,
+   "listing_accuracy": 5,
+   "seller_identity": 3,
+   "price": 5,
+   "security": 4,
+   "compliance": 4,
+   "summary": "Free feedback channel, clearly described. Collects an optional email with no privacy link."
+  },
+  "184": {
+   "judged_fails": [],
+   "functional_defect": false,
+   "category": null,
+   "listing_accuracy": 0,
+   "seller_identity": 3,
+   "price": 3,
+   "security": 3,
+   "compliance": 3,
+   "summary": "Test listing ('a product example for Apple and Google app reviewers') public and priced at 0.100."
+  },
+  "188": {
+   "judged_fails": [],
+   "functional_defect": false,
+   "category": null,
+   "listing_accuracy": 5,
+   "seller_identity": 3,
+   "price": 5,
+   "security": 4,
+   "compliance": 4,
+   "summary": "Free feedback and refund channel, clearly described, with a rate cap. Collects an optional email with no privacy link."
+  },
+  "189": {
+   "judged_fails": [],
+   "functional_defect": false,
+   "category": null,
+   "listing_accuracy": 5,
+   "seller_identity": 3,
+   "price": 5,
+   "security": 4,
+   "compliance": 5,
+   "summary": "Says what is delivered, how long the link lasts and that the same skill is free on GitHub."
+  },
+  "191": {
+   "judged_fails": [],
+   "functional_defect": false,
+   "category": null,
+   "listing_accuracy": 5,
+   "seller_identity": 3,
+   "price": 5,
+   "security": 4,
+   "compliance": 5,
+   "summary": "Clear on what is returned, the signed time-limited links and the TTL range; public-domain source stated."
+  },
+  "192": {
+   "judged_fails": [],
+   "functional_defect": false,
+   "category": "finance",
+   "listing_accuracy": 5,
+   "seller_identity": 4,
+   "price": 5,
+   "security": 4,
+   "compliance": 5,
+   "summary": "Says exactly what the pass unlocks, for how long and when the per-call item is cheaper. No not-investment-advice line in the description."
+  },
+  "193": {
+   "judged_fails": [],
+   "functional_defect": false,
+   "category": "finance",
+   "listing_accuracy": 5,
+   "seller_identity": 4,
+   "price": 5,
+   "security": 4,
+   "compliance": 5,
+   "summary": "Clear on what the report contains, how links expire and where the free sample is. No not-investment-advice line in the description."
+  },
+  "194": {
+   "judged_fails": [],
+   "functional_defect": false,
+   "category": null,
+   "listing_accuracy": 5,
+   "seller_identity": 4,
+   "price": 5,
+   "security": 4,
+   "compliance": 4,
+   "expected_miss_ok_false": "not_assessed",
+   "wrapped_routes_closed": "n/a",
+   "sensitive_item_assurance": "n/a",
+   "summary": "Free route to Team Kepler for help, refunds, rating appeals and ideas, with routed topics, a rate cap and a stated use for the optional reply email. No privacy link."
+  },
+  "195": {
+   "judged_fails": [],
+   "functional_defect": false,
+   "category": null,
+   "store": "__unnamed__newsroom",
+   "listing_accuracy": 3,
+   "seller_identity": 0,
+   "price": 5,
+   "security": 3,
+   "compliance": 4,
+   "expected_miss_ok_false": "not_assessed",
+   "wrapped_routes_closed": "n/a",
+   "sensitive_item_assurance": "n/a",
+   "partner_name": "Qatom Market Newsroom",
+   "summary": "Clear 30-day reader pass at a low price. No seller name; read-me and endpoint sit on a temporary IP-based address; the read-me lists twelve items but only this one is in the catalog; the email input has no description and no privacy link."
+  },
+  "196": {
+   "judged_fails": [],
+   "functional_defect": false,
+   "category": null,
+   "listing_accuracy": 5,
+   "seller_identity": 3,
+   "price": 5,
+   "security": 4,
+   "compliance": 4,
+   "wrapped_routes_closed": "pass",
+   "sensitive_item_assurance": "n/a",
+   "expected_miss_ok_false": "not_assessed",
+   "summary": "Free feedback and refund route that warns against sending secrets. Optional reply email with no format or privacy link."
+  },
+  "197": {
+   "judged_fails": [],
+   "functional_defect": false,
+   "category": null,
+   "listing_accuracy": 5,
+   "seller_identity": 3,
+   "price": 5,
+   "security": 5,
+   "compliance": 5,
+   "wrapped_routes_closed": "pass",
+   "sensitive_item_assurance": "pass",
+   "expected_miss_ok_false": "pass",
+   "subjectless": false,
+   "summary": "One free check for a requested secret, with the handle format described and polling sent to a free direct URL. Unknown handles answer 200 with ok:false (checked in a live free call)."
+  },
+  "198": {
+   "judged_fails": [],
+   "functional_defect": false,
+   "category": null,
+   "listing_accuracy": 5,
+   "seller_identity": 3,
+   "price": 5,
+   "security": 4,
+   "compliance": 5,
+   "wrapped_routes_closed": "pass",
+   "sensitive_item_assurance": "pass",
+   "expected_miss_ok_false": "not_assessed",
+   "summary": "Request-a-secret link with an end-to-end option, a free retrieve sibling and polling kept off Qatom. Threat model, security.txt and code published."
+  },
+  "199": {
+   "judged_fails": [],
+   "functional_defect": false,
+   "category": null,
+   "listing_accuracy": 5,
+   "seller_identity": 3,
+   "price": 5,
+   "security": 4,
+   "compliance": 5,
+   "wrapped_routes_closed": "pass",
+   "sensitive_item_assurance": "pass",
+   "expected_miss_ok_false": "not_assessed",
+   "summary": "One-time secret link with a documented end-to-end mode, stated limits and expiry, and a plain account of who can see what. Reference implementation for the seller guide's sensitive-items section."
+  }
+ }
+}

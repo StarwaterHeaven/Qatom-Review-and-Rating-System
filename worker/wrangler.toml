@@ -1,0 +1,18 @@
+# Qatom Scorecard (beta). Serves the site, the data, the badges and the free lookup
+# (catalog item #200) from one Worker. Built files come from tools/make_scorecard_site.py.
+# Keeps the name team-kepler-ratings so item #200's endpoint
+# (team-kepler-ratings.hassan-khan-cd6.workers.dev) keeps working.
+name = "team-kepler-ratings"
+main = "src/index.mjs"
+compatibility_date = "2026-10-01"
+workers_dev = true
+routes = [{ pattern = "scorecard.agentkepler.tech", custom_domain = true }]
+
+[assets]
+directory = "../site"
+binding = "ASSETS"
+run_worker_first = true
+
+[vars]
+FEEDBACK_ITEM_ID = "194"
+OFFICIAL_HOME = "https://scorecard.qatom.ai"

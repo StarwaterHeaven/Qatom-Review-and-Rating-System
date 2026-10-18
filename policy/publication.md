@@ -27,7 +27,8 @@ publicly has not opted into anything.
 | Links to the stage definition and the rubric version | Yes |
 | Under-appeal marker, where it applies | Yes |
 | Seller's right-of-reply text, where submitted | Yes |
-| Per-check pass/fail detail | No — seller only |
+| Per-check pass/fail detail and the seven part scores (the worksheet) | Yes, from 18 October 2026 |
+| The inputs each score was made from (catalog read-back and the reviewer's judged values) and a command to re-run it | Yes, from 18 October 2026 |
 | Improvement suggestions | No — seller only |
 | Transcripts or responses from live calls | No |
 
@@ -35,15 +36,20 @@ The one-line summary is a plain statement of the main finding, written so that i
 fair when read on its own, with no score next to it. "Clear description, but no free
 sibling item and no `llms.txt` pointer" — not "poor listing".
 
-**Per-check detail goes to the seller privately.** It is the actionable part, and it is
-theirs. A seller may republish their own full report wherever they like.
+**The worksheet is public; the advice is the seller's.** From 18 October 2026 (Hassan Khan's
+approval) each item's page shows which checks passed and failed and the seven part scores,
+and the inputs are published so anyone can re-run the score. The grade alone is a verdict;
+the worksheet is the proof. What stays with the seller: our suggestions for fixing things,
+the reviewer's working notes, and security detail (below). Judged values for items that are
+not public are never published.
 
 ## Security findings
 
 Where a security finding could be acted on by someone other than the seller, the detail is
 **withheld from the public summary and sent to the seller instead**. The published summary
 says a security gap was found and that the detail has gone to the seller; it does not
-describe how to use it.
+describe how to use it. On the worksheet, the two security checks for such an item read
+"Sent to the seller" (`withheld` in the published inputs).
 
 The score still reflects the finding in full. A seller does not get a better grade because
 the specifics were withheld, and a buyer is still told there is something there.

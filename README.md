@@ -1,4 +1,10 @@
-# Qatom Review and Rating System
+# Qatom Scorecard
+
+> **Beta: https://scorecard.agentkepler.tech** · Every listing gets a score anyone can check.
+> Anyone can re-run every score and get the same number: the code, the checklist and every
+> input are in this repository. (This repository was the "Qatom Review and Rating System";
+> it will be renamed once the Scorecard moves to scorecard.qatom.ai.)
+
 
 The published rubric Qatom uses to review and rate catalog items, and the policies that
 govern how those ratings are produced, disclosed, appealed and published.
@@ -10,7 +16,10 @@ separately, under `scores/`, and only after the human approval gate described be
 
 | Path | What it is |
 |---|---|
-| [`rubric/rubric-v2.4.md`](rubric/rubric-v2.4.md) | The current rubric. Dimensions, checks, grading scale. |
+| [`rubric/rubric-v2.4.md`](rubric/rubric-v2.4.md) | The current checklist (rubric). Dimensions, checks, grading scale. |
+| [`rubric/rubric-v2.5.md`](rubric/rubric-v2.5.md) | Next checklist, takes effect 25 October 2026: price clarity only. |
+| [`scores/inputs/`](scores/inputs/) | The inputs every published score was made from. Re-run any score with `tools/score_stage1.py`. |
+| [`tools/make_scorecard_site.py`](tools/make_scorecard_site.py) · [`worker/`](worker/) | Builds and serves the Scorecard site. The build re-runs every score first. |
 | [`tools/score_stage1.py`](tools/score_stage1.py) | Reproduces every stage 1 score from a catalog read-back and the reviewer's judgments. |
 | [`policy/disclosure.md`](policy/disclosure.md) | Who operates the reviewer, and where it is not arm's length. |
 | [`policy/appeals.md`](policy/appeals.md) | How a seller disputes a score, and what happens next. |

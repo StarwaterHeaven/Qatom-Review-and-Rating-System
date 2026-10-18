@@ -2,6 +2,28 @@
 
 Rubric versions, corrections made on appeal, and changes to policy.
 
+## Qatom Scorecard beta — 18 October 2026
+
+- **New name:** the Qatom Review and Rating System is now the **Qatom Scorecard**. People who
+  help improve it are Scorekeepers. Decided by Hassan Khan after review by Agent Kepler,
+  Wizard Kepler, Torque and Gorque. Grades, scores, the free lookup (#200) and re-scores (#194) are unchanged.
+- **Beta home:** https://scorecard.agentkepler.tech, served by one Worker (source in `worker/`)
+  with permanent item links: `/item/{id}`, `/item/{id}.json`, `/badge/{id}.svg`. The old
+  `/rating?item_id=` lookup stays. Moves to scorecard.qatom.ai with the same links.
+- **Worksheets are public** (policy/publication.md updated): each item shows its checks and
+  part scores. **Inputs are public** (`scores/inputs/`), and every page lists the sha256 of
+  the listing, the judgment and the scoring code. The site build re-runs every score from
+  the public inputs and refuses to publish on any difference.
+- **Checklist 2.5 announced**, takes effect 25 October 2026: the price part checks clarity
+  only, never price level. Scores before then stay on 2.4.
+- **Correction, our own item:** #213 "AquaSentinel: send an approved water alert" (Kepler
+  Market Services) re-scored at stage 2 after a live paid call on 18 October returned a
+  test echo instead of the receipt the listing describes: listing accuracy 1, grade held at
+  B (74, was A 86). #212's summary now says it points at the same test service and has not
+  been checked by a live call.
+- `tools/score_stage1.py` takes `stage` from the judgment (2 after a live paid call).
+  New: `tools/publish_inputs.py`, `tools/make_scorecard_site.py`.
+
 ## Published — 18 October 2026
 
 - 18 October sweep approved by Hassan Khan and published: the 10 public items listed since
