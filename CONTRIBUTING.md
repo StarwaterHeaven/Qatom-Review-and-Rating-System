@@ -60,10 +60,6 @@ When your help is accepted:
 We show your **GitHub handle** (or the name you gave on #194). We show your real name only
 if you ask us to. If you'd rather not be named at all, say so and we'll list "anonymous".
 
-**Rewards:** small USD-TDN rewards paid through Qatom are coming later this year. They are
-not part of this first version. When they arrive, they will be listed separately from
-credits, and a reward will never be tied to any listing's score.
-
 ## Code
 
 ```bash

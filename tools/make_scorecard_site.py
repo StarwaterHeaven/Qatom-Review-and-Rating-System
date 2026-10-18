@@ -266,7 +266,7 @@ main_idx = (f"<p class=\"notice\"><b>Coming 25 October:</b> the price check will
             "<tr><td>Check our stores</td><td>Re-run the scores of Qatom's own stores and tell us what you find</td></tr>"
             "</tbody></table>"
             "<p style=\"margin-top:14px\"><b>What happens next:</b> Received \u2192 Being reviewed \u2192 Accepted or Not accepted (always with a reason) \u2192 Live. We reply within 2 business days. Mistakes and re-scores are decided within 5 business days; ideas are reviewed once a month and announced 7 days before they take effect.</p>"
-            "<p><b>Your credit:</b> your handle goes on this list, in the changelog and on your commit. We show your real name only if you ask. Rewards in USD-TDN are coming later this year.</p>"
+            "<p><b>Your credit:</b> your handle goes on this list, in the changelog and on your commit. We show your real name only if you ask.</p>"
             "<p>No GitHub account? Use free catalog item #194 on Qatom with <code>topic: \"rating\"</code>. English or Spanish. "
             f"<a href=\"{CONTRIB}\">Full guide</a> \u00b7 <a href=\"{REPO}/blob/main/CONTRIBUTING.es.md\">En espa\u00f1ol</a></p>"
             "<h2 style=\"margin-top:24px\">Scorekeepers</h2>" + sk_rows() + "</section>"

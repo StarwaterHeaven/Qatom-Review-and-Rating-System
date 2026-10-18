@@ -36,4 +36,3 @@ en Qatom con `topic: "rating"`. Puedes escribir en español.
 
 Tu nombre de usuario aparece en la [lista de Anotadores](SCOREKEEPERS.md), en la página del
 Scorecard y en el registro de cambios. Mostramos tu nombre real solo si lo pides.
-Las recompensas en USD-TDN llegarán más adelante este año.

@@ -16,7 +16,7 @@ Rubric versions, corrections made on appeal, and changes to policy.
 - **Credit:** [`SCOREKEEPERS.md`](SCOREKEEPERS.md) and the Scorekeepers section of the
   Scorecard page, both from `scorekeepers.json`. Handles by default, real names only on
   request. First entries: Gorque, Torque, Agent Kepler and Wizard Kepler, for their reviews
-  of the Scorecard design (marked Qatom team). Rewards come later this year, not in v1.
+  of the Scorecard design (marked Qatom team).
 - **Site:** "Think this is wrong?" next to every failed check opens a pre-filled mistake
   report; "Become a Scorekeeper" section on the home page.
 - **Lookup (#200):** answers now always link to scorecard.agentkepler.tech, whichever address

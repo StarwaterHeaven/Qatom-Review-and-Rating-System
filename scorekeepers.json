@@ -1,5 +1,5 @@
 {
- "note": "Accepted contributions. Handle shown unless real name requested. Rewards are not part of v1.",
+ "note": "Accepted contributions. Handle shown unless real name requested.",
  "scorekeepers": [
   {"handle": "Gorque", "qatom_team": true, "date": "2026-10-18", "change": "Found that other products already use the name Scorecard, so the brand is always 'Qatom Scorecard'. Proposed measuring progress on a frozen checklist and 7 days' notice for scoring changes.", "link": "CHANGELOG.md"},
   {"handle": "Torque", "qatom_team": true, "date": "2026-10-18", "change": "Proposed 'anyone can re-run every score' as the headline and publishing each item's worksheet. Proposed 'Anotadores' in Spanish.", "link": "CHANGELOG.md"},
