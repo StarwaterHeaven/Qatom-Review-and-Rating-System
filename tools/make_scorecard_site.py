@@ -135,7 +135,8 @@ SK = json.load(open(os.path.join(ROOT, "scorekeepers.json")))["scorekeepers"]
 def sk_rows():
     if not SK:
         return "<p class=\"count\">No one yet. Be the first.</p>"
-    rows = "".join(f"<tr><td><b>{esc(k['handle'])}</b>{' <span class=\"tag\">Qatom team</span>' if k.get('qatom_team') else ''}</td><td>{esc(k['change'])}</td><td class=\"mono\">{esc(k['date'])}</td></tr>" for k in SK)
+    TEAM = ' <span class="tag">Qatom team</span>'
+    rows = "".join("<tr><td><b>" + esc(k["handle"]) + "</b>" + (TEAM if k.get("qatom_team") else "") + "</td><td>" + esc(k["change"]) + '</td><td class="mono">' + esc(k["date"]) + "</td></tr>" for k in SK)
     return f"<table><thead><tr><th>Who</th><th>What they changed</th><th>When</th></tr></thead><tbody>{rows}</tbody></table>"
 ISSUE_NEW = f"{REPO}/issues/new"
 CONTRIB = f"{REPO}/blob/main/CONTRIBUTING.md"
