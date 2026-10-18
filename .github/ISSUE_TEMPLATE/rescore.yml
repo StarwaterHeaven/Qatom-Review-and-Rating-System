@@ -1,0 +1,19 @@
+name: Ask for a re-score
+description: You think a score is wrong, or your listing changed.
+title: "Re-score: item #"
+labels: ["rescore", "received"]
+body:
+  - type: markdown
+    attributes:
+      value: "Free. We reply within 2 business days and decide within 5. Stores run by Qatom or a partner are re-scored by one of Qatom's directors."
+  - type: input
+    id: item_id
+    attributes: {label: Item number}
+    validations: {required: true}
+  - type: textarea
+    id: why
+    attributes: {label: What changed, or what do you think is wrong?}
+    validations: {required: true}
+  - type: input
+    id: credit
+    attributes: {label: How should we credit you?, description: "Optional. Leave blank for your GitHub handle."}

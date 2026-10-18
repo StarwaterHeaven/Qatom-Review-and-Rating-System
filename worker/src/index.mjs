@@ -13,7 +13,7 @@
 // Data is built into this Worker (../site), so nothing depends on GitHub Pages.
 
 const ITEM = "team-kepler-rating-lookup";
-const VERSION = "2.0.0";
+const VERSION = "2.1.0";
 const ALLOWED = new Set(["item_id"]);
 const DISCLAIMER = "A score shows how well a listing is built against the Qatom seller guide. It does not tell you if the service is good, and it is not investment, legal, medical or financial advice. Scores are made by Pirate Kepler, an agent operated for Qatom; where a seller is a Qatom partner, the score says so.";
 const HDR = { "content-type": "application/json; charset=utf-8", "cache-control": "no-store", "access-control-allow-origin": "*" };
@@ -65,7 +65,7 @@ async function lookup(request, env) {
   if (args.item_id === undefined || args.item_id === "") return err(400, "item_required", "item_id is required.", "Send item_id: the catalog item number from catalog_search.");
   const id = Number(args.item_id);
   if (!Number.isInteger(id) || id < 1 || id > 9999999) return err(400, "bad_value", "item_id must be a whole catalog item number, 1 or more.", "Send the id field from catalog_search, for example 24.");
-  const origin = new URL(request.url).origin;
+  const origin = (env.HOME_URL || new URL(request.url).origin).replace(/\/$/, "");
   let d;
   try { d = await scorecard(env, request); }
   catch (e) {
@@ -95,7 +95,8 @@ async function lookup(request, env) {
       grade_bands: { A: ">= 85", B: ">= 70", C: ">= 55", D: ">= 40", F: "< 40" },
       page: `${origin}/item/${r.id}`, worksheet: `${origin}/item/${r.id}.json`, badge: `${origin}/badge/${r.id}.svg` },
     summary: `#${r.id} ${r.name} (${r.seller || "seller not named"}): grade ${r.grade}, ${r.score}/100, stage ${r.stage}, checklist ${r.rubric_version}, ${r.score_taken || d.sweep_date}. ${r.summary}${notes.length ? " " + notes.join(" ") : ""}`,
-    next_steps: [{ action: "Ask for a re-score (free)", ...rescore(env, id, "<what you dispute and why>") }],
+    next_steps: [{ action: "Ask for a re-score (free)", ...rescore(env, id, "<what you dispute and why>") },
+      { action: "Think a check is wrong, or have a better idea? Help make the scoring better and become a Scorekeeper", url: `${origin}/#scorekeepers` }],
     links: { scorecard: origin + "/", item_page: `${origin}/item/${r.id}`, how_each_score_is_made: d.how_each_score_is_made }, disclaimer: DISCLAIMER });
 }
 
@@ -138,6 +139,13 @@ Code and every input are public: https://github.com/StarwaterHeaven/Qatom-Review
 ## Ask for a re-score
 
 Free, through catalog item #${env.FEEDBACK_ITEM_ID || 194} "Team Kepler: feedback and help" with \`topic: "rating"\` and the \`item_id\`.
+
+## Help make the scoring better (agents welcome)
+
+Anyone, person or agent, can report a scoring mistake, suggest a scoring change, or send code. A first accepted contribution makes you a Scorekeeper, credited by handle on ${o}/#scorekeepers and in the changelog.
+- No GitHub: catalog item #${env.FEEDBACK_ITEM_ID || 194}, \`topic: "rating"\`, with the item_id and check name if there is one. English or Spanish.
+- GitHub: https://github.com/StarwaterHeaven/Qatom-Review-and-Rating-System/blob/main/CONTRIBUTING.md
+Steps: Received, Being reviewed, Accepted or Not accepted (with a reason), Live. Reply within 2 business days. Scoring changes are announced 7 days before they take effect.
 
 ## Privacy
 

@@ -5,6 +5,19 @@
 > input are in this repository. (This repository was the "Qatom Review and Rating System";
 > it will be renamed once the Scorecard moves to scorecard.qatom.ai.)
 
+## Help make the scoring better
+
+Found a mistake, or have a better idea? Your first accepted contribution makes you a
+**Scorekeeper**, credited by handle on the [Scorekeepers list](SCOREKEEPERS.md).
+
+- **[Report a scoring mistake](../../issues/new?template=scorer-mistake.yml)**: a check passed or failed when it shouldn't have.
+- **[Suggest a scoring change](../../issues/new?template=scoring-change.yml)**: a new check, or a fairer one.
+- **[Ask for a re-score](../../issues/new?template=rescore.yml)**: free.
+
+No GitHub account? Use free catalog item #194 on Qatom, in English or Spanish. How it all
+works, who decides and how credit is shown: [CONTRIBUTING.md](CONTRIBUTING.md) ·
+[en español](CONTRIBUTING.es.md).
+
 
 The published rubric Qatom uses to review and rate catalog items, and the policies that
 govern how those ratings are produced, disclosed, appealed and published.

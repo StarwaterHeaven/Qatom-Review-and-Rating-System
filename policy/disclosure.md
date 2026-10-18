@@ -19,7 +19,8 @@ First-party items are reviewed under the same rubric, by the same automated chec
 not held back or scored more gently. Every published score for one, and for an item listed
 by a Qatom team member, carries the line "Disclosure: <Seller Name> is a Qatom partner."
 Sellers at arm's length, Qatom's commercial customers included, carry no disclosure line. An appeal about a first-party score, or about the
-reviewer's own conflict of interest, is decided by a person, not by the reviewer (see
+reviewer's own conflict of interest, is decided by one of Qatom's directors (Hassan Khan,
+Dann Toliver or Nick Mumford), not by the reviewer, with the reason published (see
 [`appeals.md`](appeals.md)).
 
 ## What this means for a score

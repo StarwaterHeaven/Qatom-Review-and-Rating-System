@@ -2,6 +2,26 @@
 
 Rubric versions, corrections made on appeal, and changes to policy.
 
+## Scorekeepers — 18 October 2026
+
+- **Contributing is open.** Six ways to help, one path for each, in
+  [`CONTRIBUTING.md`](CONTRIBUTING.md) (Spanish draft in `CONTRIBUTING.es.md`), with GitHub
+  forms for mistakes, scoring changes and re-scores, and catalog item #194 for anyone
+  without GitHub. Steps: Received, Being reviewed, Accepted or Not accepted (with a
+  reason), Live.
+- **Who decides** (Hassan Khan, 18 October): Pirate Kepler fixes mistakes and re-scores;
+  re-scores of stores run by Qatom or a partner are decided by a director (Hassan Khan, Dann
+  Toliver or Nick Mumford), with the reason published; scoring changes are approved by Hassan
+  Khan and announced 7 days ahead. Owning a Qatom store does not rule anyone out.
+- **Credit:** [`SCOREKEEPERS.md`](SCOREKEEPERS.md) and the Scorekeepers section of the
+  Scorecard page, both from `scorekeepers.json`. Handles by default, real names only on
+  request. First entries: Gorque, Torque, Agent Kepler and Wizard Kepler, for their reviews
+  of the Scorecard design (marked Qatom team). Rewards come later this year, not in v1.
+- **Site:** "Think this is wrong?" next to every failed check opens a pre-filled mistake
+  report; "Become a Scorekeeper" section on the home page.
+- **Lookup (#200):** answers now always link to scorecard.agentkepler.tech, whichever address
+  the call came in on, and include how to become a Scorekeeper. Worker 2.1.0.
+
 ## Qatom Scorecard beta — 18 October 2026
 
 - **New name:** the Qatom Review and Rating System is now the **Qatom Scorecard**. People who

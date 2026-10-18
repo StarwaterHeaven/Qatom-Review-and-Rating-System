@@ -131,6 +131,15 @@ side = {"qatom_and_partner_stores": {"items": len(partner), "average_score": avg
 meta = {k: doc.get(k) for k in ("rubric_version", "sweep_date", "items_scored", "distribution", "approved_by", "approved_on")}
 meta.update({"side_by_side": side, "scorer_sha256": scorer_sha, "beta": BASE, "official_home": OFFICIAL})
 
+SK = json.load(open(os.path.join(ROOT, "scorekeepers.json")))["scorekeepers"]
+def sk_rows():
+    if not SK:
+        return "<p class=\"count\">No one yet. Be the first.</p>"
+    rows = "".join(f"<tr><td><b>{esc(k['handle'])}</b>{' <span class=\"tag\">Qatom team</span>' if k.get('qatom_team') else ''}</td><td>{esc(k['change'])}</td><td class=\"mono\">{esc(k['date'])}</td></tr>" for k in SK)
+    return f"<table><thead><tr><th>Who</th><th>What they changed</th><th>When</th></tr></thead><tbody>{rows}</tbody></table>"
+ISSUE_NEW = f"{REPO}/issues/new"
+CONTRIB = f"{REPO}/blob/main/CONTRIBUTING.md"
+
 # ---- 3. Write files ----------------------------------------------------------------------
 os.makedirs(os.path.join(OUT, "item"), exist_ok=True)
 os.makedirs(os.path.join(OUT, "badge"), exist_ok=True)
@@ -223,7 +232,7 @@ RULES = """<section class="rules" aria-label="Fairness rules"><h2>How we keep it
 <li><b>Anyone can re-run it.</b> Every score lists the code and the inputs it came from, so you can run it yourself and get the same number.</li>
 <li><b>You can see the worksheet.</b> Each item's page shows which checks passed and failed. Two things go only to the seller: security problems someone could misuse, and our tips for fixing things.</li>
 <li><b>Our own stores are marked.</b> Stores run by Qatom or its partners say so on every score. Their average is shown next to everyone else's, below.</li>
-<li><b>Our own items get no special handling.</b> When one of our listings scores badly, the page says so plainly.</li>
+<li><b>Our own items get no special handling.</b> When one of our listings scores badly, the page says so plainly. Re-scores of stores run by Qatom or a partner are decided by Qatom's directors (Hassan Khan, Dann Toliver or Nick Mumford), and the reason is published.</li>
 <li><b>The rules don't change quietly.</b> Changes to how scores are made are announced 7 days ahead.</li>
 <li><b>Money never buys points.</b> Paying for anything on Qatom never raises a score.</li>
 <li><b>Qatom is one voice.</b> A panel of Scorekeepers will review changes to how scores are made. Qatom will be one voice on it.</li>
@@ -237,7 +246,7 @@ hero = (f"<p class=\"eyebrow\">Every listing gets a score anyone can check</p><h
         "<div class=\"intro\"><p>Every item for sale on Qatom has a page. The Qatom Scorecard gives each page a score. "
         "The score shows if the page is clear and honest: does it say what you get, is the price clear, is it safe to use, is the seller named.</p>"
         "<p>It does <b>not</b> tell you if the service is good. It tells you if the listing is honest and clear. It scores listings, not AI models.</p>"
-        "<p>Anyone can help make the scoring better. People who do are called Scorekeepers.</p></div>"
+        "<p>Anyone can help make the scoring better. People who do are called Scorekeepers. <a href=\"#scorekeepers\">Become one</a>.</p></div>"
         "<div class=\"strip\" id=\"strip\"></div>")
 main_idx = (f"<p class=\"notice\"><b>Coming 25 October:</b> the price check will look only at whether a price is clear, not whether it is high or low. "
             f"<a href=\"{NEXT_RUBRIC}\">See the change</a>.</p>"
@@ -246,7 +255,21 @@ main_idx = (f"<p class=\"notice\"><b>Coming 25 October:</b> the price check will
             "<div><label id=\"glabel\">Grade</label><div class=\"chips\" id=\"chips\" role=\"group\" aria-labelledby=\"glabel\"></div></div>"
             "<div><label for=\"sort\">Sort</label><select id=\"sort\"><option value=\"score\">Score, high to low</option><option value=\"id\">Item number</option><option value=\"seller\">Seller</option></select></div></div>"
             "<div class=\"count\" id=\"count\" aria-live=\"polite\"></div><div class=\"list\" id=\"list\"></div>"
-            + RULES +
+            + RULES + "<section class=\"sheet\" id=\"scorekeepers\"><h2>Become a Scorekeeper</h2>"
+            "<p>Scorekeepers help make the scoring better. Your first accepted report, idea or fix makes you one. No sign-up.</p>"
+            "<table><thead><tr><th>You can</th><th>How</th></tr></thead><tbody>"
+            f"<tr><td>Ask for a re-score</td><td><a href=\"{ISSUE_NEW}?template=rescore.yml\">Re-score form</a>, or free catalog item #194</td></tr>"
+            f"<tr><td>Report a scoring mistake</td><td><a href=\"{ISSUE_NEW}?template=scorer-mistake.yml\">Mistake form</a>, or \u201cThink this is wrong?\u201d next to any failed check</td></tr>"
+            f"<tr><td>Suggest a scoring change</td><td><a href=\"{ISSUE_NEW}?template=scoring-change.yml\">Suggestion form</a></td></tr>"
+            f"<tr><td>Improve the code or translate</td><td>A pull request on <a href=\"{REPO}\">GitHub</a></td></tr>"
+            "<tr><td>Check our stores</td><td>Re-run the scores of Qatom's own stores and tell us what you find</td></tr>"
+            "</tbody></table>"
+            "<p style=\"margin-top:14px\"><b>What happens next:</b> Received \u2192 Being reviewed \u2192 Accepted or Not accepted (always with a reason) \u2192 Live. We reply within 2 business days. Mistakes and re-scores are decided within 5 business days; ideas are reviewed once a month and announced 7 days before they take effect.</p>"
+            "<p><b>Your credit:</b> your handle goes on this list, in the changelog and on your commit. We show your real name only if you ask. Rewards in USD-TDN are coming later this year.</p>"
+            "<p>No GitHub account? Use free catalog item #194 on Qatom with <code>topic: \"rating\"</code>. English or Spanish. "
+            f"<a href=\"{CONTRIB}\">Full guide</a> \u00b7 <a href=\"{REPO}/blob/main/CONTRIBUTING.es.md\">En espa\u00f1ol</a></p>"
+            "<h2 style=\"margin-top:24px\">Scorekeepers</h2>" + sk_rows() + "</section>"
+            + 
             "<section class=\"notes\" aria-label=\"More\">"
             "<div class=\"note\"><h2>Our stores, side by side</h2><p id=\"side\"></p></div>"
             "<div class=\"note\"><h2>Ask for a re-score</h2><p>Free, through catalog item #194 <b>Team Kepler: feedback and help</b> with <code>topic: \"rating\"</code> and your <code>item_id</code>. While we look, the score stays here, marked as under review.</p></div>"
@@ -258,7 +281,7 @@ script = r"""<script>
   var D=JSON.parse(document.getElementById('data').textContent),items=D.items,m=D.meta,grade='all';
   var esc=function(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});};
   document.getElementById('strip').innerHTML='<span class="stat">Scores of '+esc(m.sweep_date)+'</span><span class="stat">Checklist '+esc(m.rubric_version)+'</span><span class="stat">'+items.length+' items</span>'+'ABCDF'.split('').map(function(g){return '<span class="stat stat--g"><i>'+g+'</i>'+((m.distribution||{})[g]||0)+'</span>';}).join('');
-  var s=m.side_by_side;document.getElementById('side').textContent='Qatom and partner stores: '+s.qatom_and_partner_stores.items+' items, average '+s.qatom_and_partner_stores.average_score+'. Outside stores: '+s.outside_stores.items+' items, average '+s.outside_stores.average_score+'. Our stores follow the seller guide we wrote, so they tend to score higher. That is why an outside Scorekeeper will check them. Updated every time scores are published.';
+  var s=m.side_by_side;document.getElementById('side').textContent='Qatom and partner stores: '+s.qatom_and_partner_stores.items+' items, average '+s.qatom_and_partner_stores.average_score+'. Outside stores: '+s.outside_stores.items+' items, average '+s.outside_stores.average_score+'. Our stores follow the seller guide we wrote, so they tend to score higher. Anyone can re-run them to check. Updated every time scores are published.';
   var chips=document.getElementById('chips');
   ['all','A','B','C','D','F'].forEach(function(g){var b=document.createElement('button');b.className='chip';b.type='button';b.textContent=g==='all'?'All':g;b.setAttribute('aria-pressed',g===grade?'true':'false');b.onclick=function(){grade=g;Array.prototype.forEach.call(chips.children,function(c){c.setAttribute('aria-pressed',c===b?'true':'false');});render();};chips.appendChild(b);});
   var q=document.getElementById('q'),sort=document.getElementById('sort');q.addEventListener('input',render);sort.addEventListener('change',render);
@@ -294,7 +317,10 @@ for i in items:
     hero_i = (f"<p class=\"eyebrow\">Item #{i['id']}</p><h1>{esc(i['name'])}</h1>"
               f"<p class=\"intro\">Sold by {esc(i['seller'] or 'a seller who has not set a name')}.</p>")
     parts = "".join(f"<tr><td>{esc(p['plain'])}</td><td class=\"mono\">{esc(p['part'])}</td><td>{p['score']} of 5</td></tr>" for p in ws["parts"])
-    checks = "".join(f"<tr><td>{esc(c['check'])}</td><td class=\"{'ok' if c['result']=='Pass' else 'no'}\">{esc(c['result'])}</td></tr>" for c in ws["checks"])
+    def wrong(c):
+        q = urllib.parse.urlencode({"template": "scorer-mistake.yml", "title": f"Mistake: item #{i['id']}, {c['id']}", "item_id": i["id"], "check_id": c["id"]})
+        return f' <a class=\"count\" href=\"{ISSUE_NEW}?{q}\">Think this is wrong?</a>'
+    checks = "".join(f"<tr><td>{esc(c['check'])}</td><td class=\"{'ok' if c['result']=='Pass' else 'no'}\">{esc(c['result'])}{wrong(c) if c['result']=='Fail' else ''}</td></tr>" for c in ws["checks"])
     guide = "".join(f"<tr><td>{esc(c['check'])}</td><td>{esc(c['result'])}</td></tr>" for c in ws["guide_checks"])
     rr = i["rerun"]
     snippet = f'<a href="{BASE}/item/{i["id"]}"><img src="{BASE}/badge/{i["id"]}.svg" alt="Qatom Scorecard: {i["grade"]} {i["score"]}"></a>'
@@ -307,7 +333,8 @@ for i in items:
               f"<table><thead><tr><th>Part</th><th>Name in the code</th><th>Score</th></tr></thead><tbody>{parts}</tbody></table>"
               f"<h2 style=\"margin-top:24px\">Checks</h2><table><thead><tr><th>Check</th><th>Result</th></tr></thead><tbody>{checks}</tbody></table>"
               f"<h2 style=\"margin-top:24px\">Safety checks from the seller guide</h2><table><thead><tr><th>Check</th><th>Result</th></tr></thead><tbody>{guide}</tbody></table>"
-              "<p class=\"count\">Our tips for fixing things go to the seller, not here.</p></section>"
+              "<p class=\"count\">Our tips for fixing things go to the seller, not here.</p>"
+              f"<p>See a better way to check this? <a href=\"{ISSUE_NEW}?template=scoring-change.yml\">Suggest a scoring change</a> and become a <a href=\"/#scorekeepers\">Scorekeeper</a>.</p></section>"
               f"<section class=\"sheet\"><h2>Re-run this score yourself</h2><p>Get the <a href=\"{REPO}\">code</a>, then run:</p>"
               f"<code class=\"snip\">{esc(rr['command'])}</code>"
               f"<p class=\"mono\">Listing as read: sha256 {rr['listing_sha256']}<br>Reviewer's judgment: sha256 {rr['judgment_sha256']}<br>Scoring code: sha256 {rr['scorer_sha256']}<br>Re-run when this page was built: same score.</p></section>"

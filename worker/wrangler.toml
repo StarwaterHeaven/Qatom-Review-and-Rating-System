@@ -16,3 +16,5 @@ run_worker_first = true
 [vars]
 FEEDBACK_ITEM_ID = "194"
 OFFICIAL_HOME = "https://scorecard.qatom.ai"
+# Links in lookup answers always point here, whichever address the call came in on.
+HOME_URL = "https://scorecard.agentkepler.tech"

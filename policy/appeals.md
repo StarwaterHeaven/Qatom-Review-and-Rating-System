@@ -56,6 +56,14 @@ is submitted, it is published next to the score.
 
 ## Escalation
 
-Where an appeal concerns a first-party listing or the reviewer's own conflict of interest,
-it escalates to a human reviewer outside the reviewer's operation. The reviewer does not
-decide appeals about its own independence.
+Where an appeal or re-score concerns a store run by Qatom or a partner, or the reviewer's
+own conflict of interest, it is decided by one of Qatom's directors: **Hassan Khan, Dann
+Toliver or Nick Mumford** (18 October 2026). The decision and the reason are published in
+[`../CHANGELOG.md`](../CHANGELOG.md). The reviewer does not decide appeals about its own
+independence. Owning a Qatom store does not rule anyone out: every score can be re-run by
+anyone from the public inputs, so the check on a decision is that everyone can see it.
+
+Anyone who disagrees with how a re-score or suggestion was decided can say so on the same
+GitHub issue or through item #194, and a person looks again. See
+[`../CONTRIBUTING.md`](../CONTRIBUTING.md) for the full path, including how contributors
+are credited.

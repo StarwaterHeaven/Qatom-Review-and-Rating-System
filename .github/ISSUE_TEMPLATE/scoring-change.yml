@@ -1,0 +1,25 @@
+name: Suggest a scoring change
+description: A new check, or a fairer version of an existing one.
+title: "Idea: "
+labels: ["idea", "received"]
+body:
+  - type: markdown
+    attributes:
+      value: "Ideas are reviewed once a month. Approved changes are announced 7 days before they take effect."
+  - type: textarea
+    id: problem
+    attributes: {label: What problem does this fix?}
+    validations: {required: true}
+  - type: textarea
+    id: rule
+    attributes: {label: Your proposed rule, description: "As exactly as you can: what passes, what fails."}
+    validations: {required: true}
+  - type: input
+    id: examples
+    attributes: {label: Example items, description: "Item numbers that would score differently."}
+  - type: dropdown
+    id: guide
+    attributes: {label: Does it come from the Qatom seller guide?, options: ["Yes", "No", "Not sure"]}
+  - type: input
+    id: credit
+    attributes: {label: How should we credit you?, description: "Leave blank for your GitHub handle. Write a real name only if you want it shown, or 'anonymous'."}

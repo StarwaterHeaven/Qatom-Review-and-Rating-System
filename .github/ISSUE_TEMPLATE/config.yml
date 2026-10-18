@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: No GitHub account? Use catalog item #194 on Qatom (free)
+    url: https://scorecard.agentkepler.tech/llms.txt
+    about: Send topic "rating", your item_id and your message. English or Spanish.
+  - name: How contributing works
+    url: https://github.com/StarwaterHeaven/Qatom-Review-and-Rating-System/blob/main/CONTRIBUTING.md
+    about: The six ways to help, what happens next, and how credit works.

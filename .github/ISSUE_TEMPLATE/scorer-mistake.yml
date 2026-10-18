@@ -1,0 +1,25 @@
+name: Report a scoring mistake
+description: A check passed or failed when it shouldn't have.
+title: "Mistake: item #"
+labels: ["mistake", "received"]
+body:
+  - type: markdown
+    attributes:
+      value: "Thanks. We reply within 2 business days. A security problem someone could misuse? Don't post it here: use catalog item #194 so it reaches the seller first."
+  - type: input
+    id: item_id
+    attributes: {label: Item number, description: "The catalog item number, e.g. 216"}
+    validations: {required: true}
+  - type: input
+    id: check_id
+    attributes: {label: Which check, description: "The check name from the item's worksheet, e.g. desc_points_llms_txt"}
+  - type: textarea
+    id: expected
+    attributes: {label: What should the result be, and why?}
+    validations: {required: true}
+  - type: textarea
+    id: evidence
+    attributes: {label: Evidence, description: "What you saw: the listing text, a re-run, a response. No secrets or personal data."}
+  - type: input
+    id: credit
+    attributes: {label: How should we credit you?, description: "Leave blank for your GitHub handle. Write a real name only if you want it shown, or 'anonymous'."}
