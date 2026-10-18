@@ -7,7 +7,8 @@ improvement suggestions go to the seller, not here.
 
 | Sweep | Items | Rubric | Stage |
 |---|---|---|---|
-| [`2026-10-16-stage1.md`](2026-10-16-stage1.md) · [`.json`](2026-10-16-stage1.json) | 74 | [2.4](../rubric/rubric-v2.4.md) | 1 |
+| [`2026-10-18-stage1.md`](2026-10-18-stage1.md) · [`.json`](2026-10-18-stage1.json) | 84 (10 new, 74 carried from 16 Oct) | [2.4](../rubric/rubric-v2.4.md) | 1 |
+| [`2026-10-16-stage1.md`](2026-10-16-stage1.md) · [`.json`](2026-10-16-stage1.json) | 74 | [2.4](../rubric/rubric-v2.4.md) | 1 (superseded) |
 | [`2026-10-14-stage1.md`](2026-10-14-stage1.md) · [`.json`](2026-10-14-stage1.json) | 68 | [2.3](../rubric/rubric-v2.3.md) | 1 (superseded) |
 | [`2026-10-09-stage1.md`](2026-10-09-stage1.md) · [`.json`](2026-10-09-stage1.json) | 60 | [2.2](../rubric/rubric-v2.2.md) | 1 (superseded) |
 
@@ -41,5 +42,7 @@ partner." Arm's-length sellers carry no disclosure line. See
 ## Provenance
 
 From 14 October each file is produced by [`../tools/score_stage1.py`](../tools/score_stage1.py)
-from a catalog read-back (only public items are scored) and the reviewer's judgments. The
+from a catalog read-back (only public items are scored) and the reviewer's judgments. From 18 October, a sweep of
+new items runs the scorer with `--delta` and is merged onto the last full sweep with
+[`../tools/merge_sweeps.py`](../tools/merge_sweeps.py); carried-forward items keep their own scoring date. The
 9 October file was produced by `tools/make_public_scores.py` from the internal sweep.

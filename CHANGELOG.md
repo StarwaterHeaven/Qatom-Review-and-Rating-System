@@ -2,6 +2,18 @@
 
 Rubric versions, corrections made on appeal, and changes to policy.
 
+## Published — 18 October 2026
+
+- 18 October sweep approved by Hassan Khan and published: the 10 public items listed since
+  16 October are scored (stage 1, rubric 2.4); the other 74 carry forward with their
+  16 October scores and dates. 84 items in all. Ratings page and `docs/ratings.json` rebuilt.
+- **Scorer fix.** The not-advice check in `tools/score_stage1.py` allowed only two words
+  between "not" and "advice", so "not investment, financial or legal advice" was missed.
+  It now allows up to five words, commas included. Re-checked against the whole catalog: no
+  16 October score changes. The rubric is unchanged.
+- `tools/score_stage1.py --delta` scores only judged items while reading the whole catalog
+  for the storefront checks; `tools/merge_sweeps.py` merges a delta onto the last full sweep.
+
 ## Published — 16 October 2026
 
 - 16 October sweep approved by Hassan Khan and published: 74 public items, stage 1, rubric

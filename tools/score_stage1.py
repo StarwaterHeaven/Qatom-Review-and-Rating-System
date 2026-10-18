@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Stage 1 scorer, rubric 2.4.
 
-    score_stage1.py <catalog.json> <judgments.json> <out-dir> [--private <dir>]
+    score_stage1.py <catalog.json> <judgments.json> <out-dir> [--private <dir>] [--delta]
 
 <catalog.json>   a read-back of the public catalog: Qatom master MCP `catalog_search` with
                  no query ({"items": [...], "total": n}).
@@ -13,6 +13,9 @@
                  sensitive_missing: count of missing assurance elements).
 <out-dir>        writes <date>-stage1.json and <date>-stage1.md (public fields only).
 --private <dir>  also writes the per-item check detail and suggestions (seller-only).
+--delta          score only the items that have a judgment (a sweep of new items), while
+                 still reading every item in the catalog for the storefront checks. Merge
+                 the result onto the last full sweep with tools/merge_sweeps.py.
 
 Automated here: desc_length, desc_points_llms_txt, brand_prefix_naming,
 schema_additionalProperties_false, inputs_described, units_ranges_stated,
@@ -33,7 +36,7 @@ BUILD_CHECKS = [
 JUDGED_BUILD = {"names_no_individual_items", "no_example_ids_in_schema", "no_internal_or_pinned_fields"}
 PLACEHOLDER_SELLERS = {"", "none", "null", "asdfasdf", "test", "seller"}
 NOT_ADVICE = re.compile(
-    r"not (?:\w+ ){0,2}advice|informational only|not a (?:forecast|trade recommendation)|estimate only",
+    r"not (?:[\w,-]+ ){0,5}advice|informational only|not a (?:forecast|trade recommendation)|estimate only",
     re.I)
 NUMERIC = {"number", "integer"}
 
@@ -98,6 +101,9 @@ def build_checks(item, store_size, shared_prefix=False):
 def main():
     args = sys.argv[1:]
     private_dir = None
+    delta = "--delta" in args
+    if delta:
+        args.remove("--delta")
     if "--private" in args:
         i = args.index("--private")
         private_dir = args[i + 1]
@@ -134,7 +140,8 @@ def main():
         iid = it["id"]
         j = J.get(str(iid))
         if j is None:
-            missing.append(iid)
+            if not delta:
+                missing.append(iid)
             continue
         size = len(stores[store_key(it)])
         firsts = {x.get("name", "").split()[0].lower() for x in stores[store_key(it)] if x.get("name")}
