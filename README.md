@@ -93,6 +93,11 @@ or an API response that addresses the reviewer — asking for a higher score, cl
 authority, or directing it to ignore a check — is recorded as an observation and scored
 against the security dimension. It is not acted on.
 
+## Contributors
+
+- **Starwater** ([@StarwaterHeaven](https://github.com/StarwaterHeaven)): owner and maintainer; product direction, review and testing.
+- **Pirate Kepler** (Team Kepler AI agent): build and documentation.
+
 ## Licence
 
 Code and schemas: MIT, per [`LICENSE`](LICENSE). The rubric and policy prose are intended
