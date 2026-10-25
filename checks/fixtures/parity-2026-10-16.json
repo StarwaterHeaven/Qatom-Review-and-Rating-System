@@ -1,0 +1,3365 @@
+{
+ "catalog": "scores/inputs/2026-10-16-catalog.json",
+ "items": [
+  {
+   "id": 2,
+   "store_ids": [
+    2
+   ],
+   "shared_prefix": true,
+   "build": {
+    "desc_length": true,
+    "desc_points_llms_txt": false,
+    "brand_prefix_naming": true,
+    "schema_additionalProperties_false": true,
+    "inputs_described": true,
+    "units_ranges_stated": true,
+    "identifier_or_defaults": true
+   },
+   "storefront": {
+    "free_sibling_in_storefront": false,
+    "free_feedback_item": false,
+    "llms_txt_pointer": false
+   },
+   "listing": {
+    "price_floor_ok": true,
+    "seller_named": true,
+    "not_advice_line": false
+   }
+  },
+  {
+   "id": 20,
+   "store_ids": [
+    20
+   ],
+   "shared_prefix": true,
+   "build": {
+    "desc_length": false,
+    "desc_points_llms_txt": false,
+    "brand_prefix_naming": true,
+    "schema_additionalProperties_false": true,
+    "inputs_described": true,
+    "units_ranges_stated": true,
+    "identifier_or_defaults": true
+   },
+   "storefront": {
+    "free_sibling_in_storefront": false,
+    "free_feedback_item": false,
+    "llms_txt_pointer": false
+   },
+   "listing": {
+    "price_floor_ok": true,
+    "seller_named": false,
+    "not_advice_line": false
+   }
+  },
+  {
+   "id": 21,
+   "store_ids": [
+    21
+   ],
+   "shared_prefix": true,
+   "build": {
+    "desc_length": true,
+    "desc_points_llms_txt": false,
+    "brand_prefix_naming": true,
+    "schema_additionalProperties_false": false,
+    "inputs_described": true,
+    "units_ranges_stated": true,
+    "identifier_or_defaults": false
+   },
+   "storefront": {
+    "free_sibling_in_storefront": false,
+    "free_feedback_item": false,
+    "llms_txt_pointer": false
+   },
+   "listing": {
+    "price_floor_ok": true,
+    "seller_named": true,
+    "not_advice_line": false
+   }
+  },
+  {
+   "id": 22,
+   "store_ids": [
+    22
+   ],
+   "shared_prefix": true,
+   "build": {
+    "desc_length": true,
+    "desc_points_llms_txt": false,
+    "brand_prefix_naming": true,
+    "schema_additionalProperties_false": true,
+    "inputs_described": true,
+    "units_ranges_stated": true,
+    "identifier_or_defaults": true
+   },
+   "storefront": {
+    "free_sibling_in_storefront": false,
+    "free_feedback_item": false,
+    "llms_txt_pointer": false
+   },
+   "listing": {
+    "price_floor_ok": false,
+    "seller_named": true,
+    "not_advice_line": true
+   }
+  },
+  {
+   "id": 24,
+   "store_ids": [
+    24,
+    192,
+    193
+   ],
+   "shared_prefix": true,
+   "build": {
+    "desc_length": true,
+    "desc_points_llms_txt": true,
+    "brand_prefix_naming": true,
+    "schema_additionalProperties_false": true,
+    "inputs_described": true,
+    "units_ranges_stated": true,
+    "identifier_or_defaults": true
+   },
+   "storefront": {
+    "free_sibling_in_storefront": true,
+    "free_feedback_item": false,
+    "llms_txt_pointer": true
+   },
+   "listing": {
+    "price_floor_ok": true,
+    "seller_named": true,
+    "not_advice_line": false
+   }
+  },
+  {
+   "id": 26,
+   "store_ids": [
+    26
+   ],
+   "shared_prefix": true,
+   "build": {
+    "desc_length": true,
+    "desc_points_llms_txt": false,
+    "brand_prefix_naming": true,
+    "schema_additionalProperties_false": true,
+    "inputs_described": true,
+    "units_ranges_stated": true,
+    "identifier_or_defaults": true
+   },
+   "storefront": {
+    "free_sibling_in_storefront": false,
+    "free_feedback_item": false,
+    "llms_txt_pointer": false
+   },
+   "listing": {
+    "price_floor_ok": true,
+    "seller_named": true,
+    "not_advice_line": false
+   }
+  },
+  {
+   "id": 27,
+   "store_ids": [
+    27
+   ],
+   "shared_prefix": true,
+   "build": {
+    "desc_length": true,
+    "desc_points_llms_txt": false,
+    "brand_prefix_naming": true,
+    "schema_additionalProperties_false": false,
+    "inputs_described": true,
+    "units_ranges_stated": true,
+    "identifier_or_defaults": true
+   },
+   "storefront": {
+    "free_sibling_in_storefront": false,
+    "free_feedback_item": false,
+    "llms_txt_pointer": false
+   },
+   "listing": {
+    "price_floor_ok": true,
+    "seller_named": true,
+    "not_advice_line": false
+   }
+  },
+  {
+   "id": 29,
+   "store_ids": [
+    29
+   ],
+   "shared_prefix": true,
+   "build": {
+    "desc_length": true,
+    "desc_points_llms_txt": false,
+    "brand_prefix_naming": true,
+    "schema_additionalProperties_false": true,
+    "inputs_described": true,
+    "units_ranges_stated": true,
+    "identifier_or_defaults": true
+   },
+   "storefront": {
+    "free_sibling_in_storefront": false,
+    "free_feedback_item": false,
+    "llms_txt_pointer": false
+   },
+   "listing": {
+    "price_floor_ok": true,
+    "seller_named": true,
+    "not_advice_line": false
+   }
+  },
+  {
+   "id": 30,
+   "store_ids": [
+    30
+   ],
+   "shared_prefix": true,
+   "build": {
+    "desc_length": true,
+    "desc_points_llms_txt": false,
+    "brand_prefix_naming": true,
+    "schema_additionalProperties_false": true,
+    "inputs_described": true,
+    "units_ranges_stated": true,
+    "identifier_or_defaults": true
+   },
+   "storefront": {
+    "free_sibling_in_storefront": false,
+    "free_feedback_item": false,
+    "llms_txt_pointer": false
+   },
+   "listing": {
+    "price_floor_ok": true,
+    "seller_named": true,
+    "not_advice_line": false
+   }
+  },
+  {
+   "id": 31,
+   "store_ids": [
+    31
+   ],
+   "shared_prefix": true,
+   "build": {
+    "desc_length": true,
+    "desc_points_llms_txt": false,
+    "brand_prefix_naming": true,
+    "schema_additionalProperties_false": true,
+    "inputs_described": true,
+    "units_ranges_stated": true,
+    "identifier_or_defaults": true
+   },
+   "storefront": {
+    "free_sibling_in_storefront": false,
+    "free_feedback_item": false,
+    "llms_txt_pointer": false
+   },
+   "listing": {
+    "price_floor_ok": true,
+    "seller_named": true,
+    "not_advice_line": false
+   }
+  },
+  {
+   "id": 32,
+   "store_ids": [
+    32,
+    33,
+    34,
+    35,
+    36,
+    38,
+    39,
+    40,
+    78
+   ],
+   "shared_prefix": true,
+   "build": {
+    "desc_length": true,
+    "desc_points_llms_txt": true,
+    "brand_prefix_naming": true,
+    "schema_additionalProperties_false": true,
+    "inputs_described": true,
+    "units_ranges_stated": true,
+    "identifier_or_defaults": true
+   },
+   "storefront": {
+    "free_sibling_in_storefront": true,
+    "free_feedback_item": true,
+    "llms_txt_pointer": true
+   },
+   "listing": {
+    "price_floor_ok": true,
+    "seller_named": true,
+    "not_advice_line": false
+   }
+  },
+  {
+   "id": 33,
+   "store_ids": [
+    32,
+    33,
+    34,
+    35,
+    36,
+    38,
+    39,
+    40,
+    78
+   ],
+   "shared_prefix": true,
+   "build": {
+    "desc_length": true,
+    "desc_points_llms_txt": true,
+    "brand_prefix_naming": true,
+    "schema_additionalProperties_false": true,
+    "inputs_described": true,
+    "units_ranges_stated": true,
+    "identifier_or_defaults": true
+   },
+   "storefront": {
+    "free_sibling_in_storefront": true,
+    "free_feedback_item": true,
+    "llms_txt_pointer": true
+   },
+   "listing": {
+    "price_floor_ok": true,
+    "seller_named": true,
+    "not_advice_line": false
+   }
+  },
+  {
+   "id": 34,
+   "store_ids": [
+    32,
+    33,
+    34,
+    35,
+    36,
+    38,
+    39,
+    40,
+    78
+   ],
+   "shared_prefix": true,
+   "build": {
+    "desc_length": true,
+    "desc_points_llms_txt": true,
+    "brand_prefix_naming": true,
+    "schema_additionalProperties_false": true,
+    "inputs_described": true,
+    "units_ranges_stated": true,
+    "identifier_or_defaults": false
+   },
+   "storefront": {
+    "free_sibling_in_storefront": true,
+    "free_feedback_item": true,
+    "llms_txt_pointer": true
+   },
+   "listing": {
+    "price_floor_ok": true,
+    "seller_named": true,
+    "not_advice_line": false
+   }
+  },
+  {
+   "id": 35,
+   "store_ids": [
+    32,
+    33,
+    34,
+    35,
+    36,
+    38,
+    39,
+    40,
+    78
+   ],
+   "shared_prefix": true,
+   "build": {
+    "desc_length": true,
+    "desc_points_llms_txt": true,
+    "brand_prefix_naming": true,
+    "schema_additionalProperties_false": true,
+    "inputs_described": true,
+    "units_ranges_stated": true,
+    "identifier_or_defaults": true
+   },
+   "storefront": {
+    "free_sibling_in_storefront": true,
+    "free_feedback_item": true,
+    "llms_txt_pointer": true
+   },
+   "listing": {
+    "price_floor_ok": true,
+    "seller_named": true,
+    "not_advice_line": false
+   }
+  },
+  {
+   "id": 36,
+   "store_ids": [
+    32,
+    33,
+    34,
+    35,
+    36,
+    38,
+    39,
+    40,
+    78
+   ],
+   "shared_prefix": true,
+   "build": {
+    "desc_length": true,
+    "desc_points_llms_txt": true,
+    "brand_prefix_naming": true,
+    "schema_additionalProperties_false": true,
+    "inputs_described": true,
+    "units_ranges_stated": true,
+    "identifier_or_defaults": true
+   },
+   "storefront": {
+    "free_sibling_in_storefront": true,
+    "free_feedback_item": true,
+    "llms_txt_pointer": true
+   },
+   "listing": {
+    "price_floor_ok": true,
+    "seller_named": true,
+    "not_advice_line": false
+   }
+  },
+  {
+   "id": 38,
+   "store_ids": [
+    32,
+    33,
+    34,
+    35,
+    36,
+    38,
+    39,
+    40,
+    78
+   ],
+   "shared_prefix": true,
+   "build": {
+    "desc_length": true,
+    "desc_points_llms_txt": true,
+    "brand_prefix_naming": true,
+    "schema_additionalProperties_false": true,
+    "inputs_described": true,
+    "units_ranges_stated": true,
+    "identifier_or_defaults": true
+   },
+   "storefront": {
+    "free_sibling_in_storefront": true,
+    "free_feedback_item": true,
+    "llms_txt_pointer": true
+   },
+   "listing": {
+    "price_floor_ok": true,
+    "seller_named": true,
+    "not_advice_line": false
+   }
+  },
+  {
+   "id": 39,
+   "store_ids": [
+    32,
+    33,
+    34,
+    35,
+    36,
+    38,
+    39,
+    40,
+    78
+   ],
+   "shared_prefix": true,
+   "build": {
+    "desc_length": true,
+    "desc_points_llms_txt": true,
+    "brand_prefix_naming": true,
+    "schema_additionalProperties_false": true,
+    "inputs_described": true,
+    "units_ranges_stated": true,
+    "identifier_or_defaults": true
+   },
+   "storefront": {
+    "free_sibling_in_storefront": true,
+    "free_feedback_item": true,
+    "llms_txt_pointer": true
+   },
+   "listing": {
+    "price_floor_ok": true,
+    "seller_named": true,
+    "not_advice_line": false
+   }
+  },
+  {
+   "id": 40,
+   "store_ids": [
+    32,
+    33,
+    34,
+    35,
+    36,
+    38,
+    39,
+    40,
+    78
+   ],
+   "shared_prefix": true,
+   "build": {
+    "desc_length": true,
+    "desc_points_llms_txt": true,
+    "brand_prefix_naming": true,
+    "schema_additionalProperties_false": true,
+    "inputs_described": true,
+    "units_ranges_stated": true,
+    "identifier_or_defaults": true
+   },
+   "storefront": {
+    "free_sibling_in_storefront": true,
+    "free_feedback_item": true,
+    "llms_txt_pointer": true
+   },
+   "listing": {
+    "price_floor_ok": true,
+    "seller_named": true,
+    "not_advice_line": false
+   }
+  },
+  {
+   "id": 41,
+   "store_ids": [
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77
+   ],
+   "shared_prefix": false,
+   "build": {
+    "desc_length": true,
+    "desc_points_llms_txt": false,
+    "brand_prefix_naming": false,
+    "schema_additionalProperties_false": true,
+    "inputs_described": true,
+    "units_ranges_stated": false,
+    "identifier_or_defaults": true
+   },
+   "storefront": {
+    "free_sibling_in_storefront": false,
+    "free_feedback_item": false,
+    "llms_txt_pointer": false
+   },
+   "listing": {
+    "price_floor_ok": true,
+    "seller_named": false,
+    "not_advice_line": false
+   }
+  },
+  {
+   "id": 42,
+   "store_ids": [
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77
+   ],
+   "shared_prefix": false,
+   "build": {
+    "desc_length": true,
+    "desc_points_llms_txt": false,
+    "brand_prefix_naming": false,
+    "schema_additionalProperties_false": true,
+    "inputs_described": true,
+    "units_ranges_stated": false,
+    "identifier_or_defaults": true
+   },
+   "storefront": {
+    "free_sibling_in_storefront": false,
+    "free_feedback_item": false,
+    "llms_txt_pointer": false
+   },
+   "listing": {
+    "price_floor_ok": true,
+    "seller_named": false,
+    "not_advice_line": false
+   }
+  },
+  {
+   "id": 43,
+   "store_ids": [
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77
+   ],
+   "shared_prefix": false,
+   "build": {
+    "desc_length": true,
+    "desc_points_llms_txt": false,
+    "brand_prefix_naming": false,
+    "schema_additionalProperties_false": true,
+    "inputs_described": true,
+    "units_ranges_stated": false,
+    "identifier_or_defaults": true
+   },
+   "storefront": {
+    "free_sibling_in_storefront": false,
+    "free_feedback_item": false,
+    "llms_txt_pointer": false
+   },
+   "listing": {
+    "price_floor_ok": true,
+    "seller_named": false,
+    "not_advice_line": false
+   }
+  },
+  {
+   "id": 44,
+   "store_ids": [
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77
+   ],
+   "shared_prefix": false,
+   "build": {
+    "desc_length": true,
+    "desc_points_llms_txt": false,
+    "brand_prefix_naming": false,
+    "schema_additionalProperties_false": true,
+    "inputs_described": true,
+    "units_ranges_stated": false,
+    "identifier_or_defaults": true
+   },
+   "storefront": {
+    "free_sibling_in_storefront": false,
+    "free_feedback_item": false,
+    "llms_txt_pointer": false
+   },
+   "listing": {
+    "price_floor_ok": true,
+    "seller_named": false,
+    "not_advice_line": false
+   }
+  },
+  {
+   "id": 45,
+   "store_ids": [
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77
+   ],
+   "shared_prefix": false,
+   "build": {
+    "desc_length": true,
+    "desc_points_llms_txt": false,
+    "brand_prefix_naming": false,
+    "schema_additionalProperties_false": true,
+    "inputs_described": true,
+    "units_ranges_stated": false,
+    "identifier_or_defaults": true
+   },
+   "storefront": {
+    "free_sibling_in_storefront": false,
+    "free_feedback_item": false,
+    "llms_txt_pointer": false
+   },
+   "listing": {
+    "price_floor_ok": true,
+    "seller_named": false,
+    "not_advice_line": false
+   }
+  },
+  {
+   "id": 46,
+   "store_ids": [
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77
+   ],
+   "shared_prefix": false,
+   "build": {
+    "desc_length": true,
+    "desc_points_llms_txt": false,
+    "brand_prefix_naming": false,
+    "schema_additionalProperties_false": true,
+    "inputs_described": true,
+    "units_ranges_stated": false,
+    "identifier_or_defaults": true
+   },
+   "storefront": {
+    "free_sibling_in_storefront": false,
+    "free_feedback_item": false,
+    "llms_txt_pointer": false
+   },
+   "listing": {
+    "price_floor_ok": true,
+    "seller_named": false,
+    "not_advice_line": false
+   }
+  },
+  {
+   "id": 47,
+   "store_ids": [
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77
+   ],
+   "shared_prefix": false,
+   "build": {
+    "desc_length": true,
+    "desc_points_llms_txt": false,
+    "brand_prefix_naming": false,
+    "schema_additionalProperties_false": true,
+    "inputs_described": true,
+    "units_ranges_stated": false,
+    "identifier_or_defaults": true
+   },
+   "storefront": {
+    "free_sibling_in_storefront": false,
+    "free_feedback_item": false,
+    "llms_txt_pointer": false
+   },
+   "listing": {
+    "price_floor_ok": true,
+    "seller_named": false,
+    "not_advice_line": false
+   }
+  },
+  {
+   "id": 48,
+   "store_ids": [
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77
+   ],
+   "shared_prefix": false,
+   "build": {
+    "desc_length": true,
+    "desc_points_llms_txt": false,
+    "brand_prefix_naming": false,
+    "schema_additionalProperties_false": true,
+    "inputs_described": true,
+    "units_ranges_stated": false,
+    "identifier_or_defaults": true
+   },
+   "storefront": {
+    "free_sibling_in_storefront": false,
+    "free_feedback_item": false,
+    "llms_txt_pointer": false
+   },
+   "listing": {
+    "price_floor_ok": true,
+    "seller_named": false,
+    "not_advice_line": false
+   }
+  },
+  {
+   "id": 49,
+   "store_ids": [
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77
+   ],
+   "shared_prefix": false,
+   "build": {
+    "desc_length": true,
+    "desc_points_llms_txt": false,
+    "brand_prefix_naming": false,
+    "schema_additionalProperties_false": true,
+    "inputs_described": true,
+    "units_ranges_stated": false,
+    "identifier_or_defaults": true
+   },
+   "storefront": {
+    "free_sibling_in_storefront": false,
+    "free_feedback_item": false,
+    "llms_txt_pointer": false
+   },
+   "listing": {
+    "price_floor_ok": true,
+    "seller_named": false,
+    "not_advice_line": false
+   }
+  },
+  {
+   "id": 50,
+   "store_ids": [
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77
+   ],
+   "shared_prefix": false,
+   "build": {
+    "desc_length": true,
+    "desc_points_llms_txt": false,
+    "brand_prefix_naming": false,
+    "schema_additionalProperties_false": true,
+    "inputs_described": true,
+    "units_ranges_stated": false,
+    "identifier_or_defaults": true
+   },
+   "storefront": {
+    "free_sibling_in_storefront": false,
+    "free_feedback_item": false,
+    "llms_txt_pointer": false
+   },
+   "listing": {
+    "price_floor_ok": true,
+    "seller_named": false,
+    "not_advice_line": false
+   }
+  },
+  {
+   "id": 51,
+   "store_ids": [
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77
+   ],
+   "shared_prefix": false,
+   "build": {
+    "desc_length": true,
+    "desc_points_llms_txt": false,
+    "brand_prefix_naming": false,
+    "schema_additionalProperties_false": true,
+    "inputs_described": true,
+    "units_ranges_stated": false,
+    "identifier_or_defaults": true
+   },
+   "storefront": {
+    "free_sibling_in_storefront": false,
+    "free_feedback_item": false,
+    "llms_txt_pointer": false
+   },
+   "listing": {
+    "price_floor_ok": true,
+    "seller_named": false,
+    "not_advice_line": false
+   }
+  },
+  {
+   "id": 52,
+   "store_ids": [
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77
+   ],
+   "shared_prefix": false,
+   "build": {
+    "desc_length": true,
+    "desc_points_llms_txt": false,
+    "brand_prefix_naming": false,
+    "schema_additionalProperties_false": true,
+    "inputs_described": true,
+    "units_ranges_stated": false,
+    "identifier_or_defaults": true
+   },
+   "storefront": {
+    "free_sibling_in_storefront": false,
+    "free_feedback_item": false,
+    "llms_txt_pointer": false
+   },
+   "listing": {
+    "price_floor_ok": true,
+    "seller_named": false,
+    "not_advice_line": false
+   }
+  },
+  {
+   "id": 53,
+   "store_ids": [
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77
+   ],
+   "shared_prefix": false,
+   "build": {
+    "desc_length": true,
+    "desc_points_llms_txt": false,
+    "brand_prefix_naming": false,
+    "schema_additionalProperties_false": true,
+    "inputs_described": true,
+    "units_ranges_stated": false,
+    "identifier_or_defaults": true
+   },
+   "storefront": {
+    "free_sibling_in_storefront": false,
+    "free_feedback_item": false,
+    "llms_txt_pointer": false
+   },
+   "listing": {
+    "price_floor_ok": true,
+    "seller_named": false,
+    "not_advice_line": false
+   }
+  },
+  {
+   "id": 54,
+   "store_ids": [
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77
+   ],
+   "shared_prefix": false,
+   "build": {
+    "desc_length": true,
+    "desc_points_llms_txt": false,
+    "brand_prefix_naming": false,
+    "schema_additionalProperties_false": true,
+    "inputs_described": true,
+    "units_ranges_stated": false,
+    "identifier_or_defaults": true
+   },
+   "storefront": {
+    "free_sibling_in_storefront": false,
+    "free_feedback_item": false,
+    "llms_txt_pointer": false
+   },
+   "listing": {
+    "price_floor_ok": true,
+    "seller_named": false,
+    "not_advice_line": false
+   }
+  },
+  {
+   "id": 55,
+   "store_ids": [
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77
+   ],
+   "shared_prefix": false,
+   "build": {
+    "desc_length": true,
+    "desc_points_llms_txt": false,
+    "brand_prefix_naming": false,
+    "schema_additionalProperties_false": true,
+    "inputs_described": true,
+    "units_ranges_stated": false,
+    "identifier_or_defaults": true
+   },
+   "storefront": {
+    "free_sibling_in_storefront": false,
+    "free_feedback_item": false,
+    "llms_txt_pointer": false
+   },
+   "listing": {
+    "price_floor_ok": true,
+    "seller_named": false,
+    "not_advice_line": false
+   }
+  },
+  {
+   "id": 56,
+   "store_ids": [
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77
+   ],
+   "shared_prefix": false,
+   "build": {
+    "desc_length": true,
+    "desc_points_llms_txt": false,
+    "brand_prefix_naming": false,
+    "schema_additionalProperties_false": true,
+    "inputs_described": true,
+    "units_ranges_stated": false,
+    "identifier_or_defaults": true
+   },
+   "storefront": {
+    "free_sibling_in_storefront": false,
+    "free_feedback_item": false,
+    "llms_txt_pointer": false
+   },
+   "listing": {
+    "price_floor_ok": true,
+    "seller_named": false,
+    "not_advice_line": false
+   }
+  },
+  {
+   "id": 57,
+   "store_ids": [
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77
+   ],
+   "shared_prefix": false,
+   "build": {
+    "desc_length": true,
+    "desc_points_llms_txt": false,
+    "brand_prefix_naming": false,
+    "schema_additionalProperties_false": true,
+    "inputs_described": true,
+    "units_ranges_stated": false,
+    "identifier_or_defaults": true
+   },
+   "storefront": {
+    "free_sibling_in_storefront": false,
+    "free_feedback_item": false,
+    "llms_txt_pointer": false
+   },
+   "listing": {
+    "price_floor_ok": true,
+    "seller_named": false,
+    "not_advice_line": false
+   }
+  },
+  {
+   "id": 58,
+   "store_ids": [
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77
+   ],
+   "shared_prefix": false,
+   "build": {
+    "desc_length": true,
+    "desc_points_llms_txt": false,
+    "brand_prefix_naming": false,
+    "schema_additionalProperties_false": true,
+    "inputs_described": true,
+    "units_ranges_stated": false,
+    "identifier_or_defaults": true
+   },
+   "storefront": {
+    "free_sibling_in_storefront": false,
+    "free_feedback_item": false,
+    "llms_txt_pointer": false
+   },
+   "listing": {
+    "price_floor_ok": true,
+    "seller_named": false,
+    "not_advice_line": false
+   }
+  },
+  {
+   "id": 59,
+   "store_ids": [
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77
+   ],
+   "shared_prefix": false,
+   "build": {
+    "desc_length": true,
+    "desc_points_llms_txt": false,
+    "brand_prefix_naming": false,
+    "schema_additionalProperties_false": true,
+    "inputs_described": true,
+    "units_ranges_stated": false,
+    "identifier_or_defaults": true
+   },
+   "storefront": {
+    "free_sibling_in_storefront": false,
+    "free_feedback_item": false,
+    "llms_txt_pointer": false
+   },
+   "listing": {
+    "price_floor_ok": true,
+    "seller_named": false,
+    "not_advice_line": false
+   }
+  },
+  {
+   "id": 60,
+   "store_ids": [
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77
+   ],
+   "shared_prefix": false,
+   "build": {
+    "desc_length": true,
+    "desc_points_llms_txt": false,
+    "brand_prefix_naming": false,
+    "schema_additionalProperties_false": true,
+    "inputs_described": true,
+    "units_ranges_stated": false,
+    "identifier_or_defaults": true
+   },
+   "storefront": {
+    "free_sibling_in_storefront": false,
+    "free_feedback_item": false,
+    "llms_txt_pointer": false
+   },
+   "listing": {
+    "price_floor_ok": true,
+    "seller_named": false,
+    "not_advice_line": false
+   }
+  },
+  {
+   "id": 61,
+   "store_ids": [
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77
+   ],
+   "shared_prefix": false,
+   "build": {
+    "desc_length": true,
+    "desc_points_llms_txt": false,
+    "brand_prefix_naming": false,
+    "schema_additionalProperties_false": true,
+    "inputs_described": true,
+    "units_ranges_stated": false,
+    "identifier_or_defaults": true
+   },
+   "storefront": {
+    "free_sibling_in_storefront": false,
+    "free_feedback_item": false,
+    "llms_txt_pointer": false
+   },
+   "listing": {
+    "price_floor_ok": true,
+    "seller_named": false,
+    "not_advice_line": false
+   }
+  },
+  {
+   "id": 62,
+   "store_ids": [
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77
+   ],
+   "shared_prefix": false,
+   "build": {
+    "desc_length": true,
+    "desc_points_llms_txt": false,
+    "brand_prefix_naming": false,
+    "schema_additionalProperties_false": true,
+    "inputs_described": true,
+    "units_ranges_stated": false,
+    "identifier_or_defaults": true
+   },
+   "storefront": {
+    "free_sibling_in_storefront": false,
+    "free_feedback_item": false,
+    "llms_txt_pointer": false
+   },
+   "listing": {
+    "price_floor_ok": true,
+    "seller_named": false,
+    "not_advice_line": false
+   }
+  },
+  {
+   "id": 63,
+   "store_ids": [
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77
+   ],
+   "shared_prefix": false,
+   "build": {
+    "desc_length": true,
+    "desc_points_llms_txt": false,
+    "brand_prefix_naming": false,
+    "schema_additionalProperties_false": true,
+    "inputs_described": true,
+    "units_ranges_stated": false,
+    "identifier_or_defaults": true
+   },
+   "storefront": {
+    "free_sibling_in_storefront": false,
+    "free_feedback_item": false,
+    "llms_txt_pointer": false
+   },
+   "listing": {
+    "price_floor_ok": true,
+    "seller_named": false,
+    "not_advice_line": false
+   }
+  },
+  {
+   "id": 64,
+   "store_ids": [
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77
+   ],
+   "shared_prefix": false,
+   "build": {
+    "desc_length": true,
+    "desc_points_llms_txt": false,
+    "brand_prefix_naming": false,
+    "schema_additionalProperties_false": true,
+    "inputs_described": true,
+    "units_ranges_stated": false,
+    "identifier_or_defaults": true
+   },
+   "storefront": {
+    "free_sibling_in_storefront": false,
+    "free_feedback_item": false,
+    "llms_txt_pointer": false
+   },
+   "listing": {
+    "price_floor_ok": true,
+    "seller_named": false,
+    "not_advice_line": false
+   }
+  },
+  {
+   "id": 65,
+   "store_ids": [
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77
+   ],
+   "shared_prefix": false,
+   "build": {
+    "desc_length": true,
+    "desc_points_llms_txt": false,
+    "brand_prefix_naming": false,
+    "schema_additionalProperties_false": true,
+    "inputs_described": true,
+    "units_ranges_stated": false,
+    "identifier_or_defaults": true
+   },
+   "storefront": {
+    "free_sibling_in_storefront": false,
+    "free_feedback_item": false,
+    "llms_txt_pointer": false
+   },
+   "listing": {
+    "price_floor_ok": true,
+    "seller_named": false,
+    "not_advice_line": false
+   }
+  },
+  {
+   "id": 66,
+   "store_ids": [
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77
+   ],
+   "shared_prefix": false,
+   "build": {
+    "desc_length": true,
+    "desc_points_llms_txt": false,
+    "brand_prefix_naming": false,
+    "schema_additionalProperties_false": true,
+    "inputs_described": true,
+    "units_ranges_stated": false,
+    "identifier_or_defaults": true
+   },
+   "storefront": {
+    "free_sibling_in_storefront": false,
+    "free_feedback_item": false,
+    "llms_txt_pointer": false
+   },
+   "listing": {
+    "price_floor_ok": true,
+    "seller_named": false,
+    "not_advice_line": false
+   }
+  },
+  {
+   "id": 67,
+   "store_ids": [
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77
+   ],
+   "shared_prefix": false,
+   "build": {
+    "desc_length": true,
+    "desc_points_llms_txt": false,
+    "brand_prefix_naming": false,
+    "schema_additionalProperties_false": true,
+    "inputs_described": true,
+    "units_ranges_stated": false,
+    "identifier_or_defaults": true
+   },
+   "storefront": {
+    "free_sibling_in_storefront": false,
+    "free_feedback_item": false,
+    "llms_txt_pointer": false
+   },
+   "listing": {
+    "price_floor_ok": true,
+    "seller_named": false,
+    "not_advice_line": false
+   }
+  },
+  {
+   "id": 68,
+   "store_ids": [
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77
+   ],
+   "shared_prefix": false,
+   "build": {
+    "desc_length": true,
+    "desc_points_llms_txt": false,
+    "brand_prefix_naming": false,
+    "schema_additionalProperties_false": true,
+    "inputs_described": true,
+    "units_ranges_stated": false,
+    "identifier_or_defaults": true
+   },
+   "storefront": {
+    "free_sibling_in_storefront": false,
+    "free_feedback_item": false,
+    "llms_txt_pointer": false
+   },
+   "listing": {
+    "price_floor_ok": true,
+    "seller_named": false,
+    "not_advice_line": false
+   }
+  },
+  {
+   "id": 69,
+   "store_ids": [
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77
+   ],
+   "shared_prefix": false,
+   "build": {
+    "desc_length": true,
+    "desc_points_llms_txt": false,
+    "brand_prefix_naming": false,
+    "schema_additionalProperties_false": true,
+    "inputs_described": true,
+    "units_ranges_stated": false,
+    "identifier_or_defaults": true
+   },
+   "storefront": {
+    "free_sibling_in_storefront": false,
+    "free_feedback_item": false,
+    "llms_txt_pointer": false
+   },
+   "listing": {
+    "price_floor_ok": true,
+    "seller_named": false,
+    "not_advice_line": false
+   }
+  },
+  {
+   "id": 70,
+   "store_ids": [
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77
+   ],
+   "shared_prefix": false,
+   "build": {
+    "desc_length": true,
+    "desc_points_llms_txt": false,
+    "brand_prefix_naming": false,
+    "schema_additionalProperties_false": true,
+    "inputs_described": true,
+    "units_ranges_stated": false,
+    "identifier_or_defaults": true
+   },
+   "storefront": {
+    "free_sibling_in_storefront": false,
+    "free_feedback_item": false,
+    "llms_txt_pointer": false
+   },
+   "listing": {
+    "price_floor_ok": true,
+    "seller_named": false,
+    "not_advice_line": false
+   }
+  },
+  {
+   "id": 71,
+   "store_ids": [
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77
+   ],
+   "shared_prefix": false,
+   "build": {
+    "desc_length": true,
+    "desc_points_llms_txt": false,
+    "brand_prefix_naming": false,
+    "schema_additionalProperties_false": true,
+    "inputs_described": true,
+    "units_ranges_stated": false,
+    "identifier_or_defaults": true
+   },
+   "storefront": {
+    "free_sibling_in_storefront": false,
+    "free_feedback_item": false,
+    "llms_txt_pointer": false
+   },
+   "listing": {
+    "price_floor_ok": true,
+    "seller_named": false,
+    "not_advice_line": false
+   }
+  },
+  {
+   "id": 72,
+   "store_ids": [
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77
+   ],
+   "shared_prefix": false,
+   "build": {
+    "desc_length": true,
+    "desc_points_llms_txt": false,
+    "brand_prefix_naming": false,
+    "schema_additionalProperties_false": true,
+    "inputs_described": true,
+    "units_ranges_stated": false,
+    "identifier_or_defaults": true
+   },
+   "storefront": {
+    "free_sibling_in_storefront": false,
+    "free_feedback_item": false,
+    "llms_txt_pointer": false
+   },
+   "listing": {
+    "price_floor_ok": true,
+    "seller_named": false,
+    "not_advice_line": false
+   }
+  },
+  {
+   "id": 73,
+   "store_ids": [
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77
+   ],
+   "shared_prefix": false,
+   "build": {
+    "desc_length": true,
+    "desc_points_llms_txt": false,
+    "brand_prefix_naming": false,
+    "schema_additionalProperties_false": true,
+    "inputs_described": true,
+    "units_ranges_stated": false,
+    "identifier_or_defaults": true
+   },
+   "storefront": {
+    "free_sibling_in_storefront": false,
+    "free_feedback_item": false,
+    "llms_txt_pointer": false
+   },
+   "listing": {
+    "price_floor_ok": true,
+    "seller_named": false,
+    "not_advice_line": false
+   }
+  },
+  {
+   "id": 74,
+   "store_ids": [
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77
+   ],
+   "shared_prefix": false,
+   "build": {
+    "desc_length": true,
+    "desc_points_llms_txt": false,
+    "brand_prefix_naming": false,
+    "schema_additionalProperties_false": true,
+    "inputs_described": true,
+    "units_ranges_stated": false,
+    "identifier_or_defaults": true
+   },
+   "storefront": {
+    "free_sibling_in_storefront": false,
+    "free_feedback_item": false,
+    "llms_txt_pointer": false
+   },
+   "listing": {
+    "price_floor_ok": true,
+    "seller_named": false,
+    "not_advice_line": false
+   }
+  },
+  {
+   "id": 75,
+   "store_ids": [
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77
+   ],
+   "shared_prefix": false,
+   "build": {
+    "desc_length": true,
+    "desc_points_llms_txt": false,
+    "brand_prefix_naming": false,
+    "schema_additionalProperties_false": true,
+    "inputs_described": true,
+    "units_ranges_stated": false,
+    "identifier_or_defaults": true
+   },
+   "storefront": {
+    "free_sibling_in_storefront": false,
+    "free_feedback_item": false,
+    "llms_txt_pointer": false
+   },
+   "listing": {
+    "price_floor_ok": true,
+    "seller_named": false,
+    "not_advice_line": false
+   }
+  },
+  {
+   "id": 76,
+   "store_ids": [
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77
+   ],
+   "shared_prefix": false,
+   "build": {
+    "desc_length": true,
+    "desc_points_llms_txt": false,
+    "brand_prefix_naming": false,
+    "schema_additionalProperties_false": true,
+    "inputs_described": true,
+    "units_ranges_stated": false,
+    "identifier_or_defaults": true
+   },
+   "storefront": {
+    "free_sibling_in_storefront": false,
+    "free_feedback_item": false,
+    "llms_txt_pointer": false
+   },
+   "listing": {
+    "price_floor_ok": true,
+    "seller_named": false,
+    "not_advice_line": false
+   }
+  },
+  {
+   "id": 77,
+   "store_ids": [
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77
+   ],
+   "shared_prefix": false,
+   "build": {
+    "desc_length": true,
+    "desc_points_llms_txt": false,
+    "brand_prefix_naming": false,
+    "schema_additionalProperties_false": true,
+    "inputs_described": true,
+    "units_ranges_stated": false,
+    "identifier_or_defaults": true
+   },
+   "storefront": {
+    "free_sibling_in_storefront": false,
+    "free_feedback_item": false,
+    "llms_txt_pointer": false
+   },
+   "listing": {
+    "price_floor_ok": true,
+    "seller_named": false,
+    "not_advice_line": false
+   }
+  },
+  {
+   "id": 78,
+   "store_ids": [
+    32,
+    33,
+    34,
+    35,
+    36,
+    38,
+    39,
+    40,
+    78
+   ],
+   "shared_prefix": true,
+   "build": {
+    "desc_length": true,
+    "desc_points_llms_txt": true,
+    "brand_prefix_naming": true,
+    "schema_additionalProperties_false": true,
+    "inputs_described": true,
+    "units_ranges_stated": true,
+    "identifier_or_defaults": true
+   },
+   "storefront": {
+    "free_sibling_in_storefront": true,
+    "free_feedback_item": true,
+    "llms_txt_pointer": true
+   },
+   "listing": {
+    "price_floor_ok": true,
+    "seller_named": true,
+    "not_advice_line": false
+   }
+  },
+  {
+   "id": 79,
+   "store_ids": [
+    79,
+    80
+   ],
+   "shared_prefix": false,
+   "build": {
+    "desc_length": false,
+    "desc_points_llms_txt": false,
+    "brand_prefix_naming": false,
+    "schema_additionalProperties_false": false,
+    "inputs_described": true,
+    "units_ranges_stated": true,
+    "identifier_or_defaults": true
+   },
+   "storefront": {
+    "free_sibling_in_storefront": false,
+    "free_feedback_item": false,
+    "llms_txt_pointer": false
+   },
+   "listing": {
+    "price_floor_ok": true,
+    "seller_named": true,
+    "not_advice_line": false
+   }
+  },
+  {
+   "id": 80,
+   "store_ids": [
+    79,
+    80
+   ],
+   "shared_prefix": false,
+   "build": {
+    "desc_length": true,
+    "desc_points_llms_txt": false,
+    "brand_prefix_naming": false,
+    "schema_additionalProperties_false": true,
+    "inputs_described": true,
+    "units_ranges_stated": true,
+    "identifier_or_defaults": true
+   },
+   "storefront": {
+    "free_sibling_in_storefront": false,
+    "free_feedback_item": false,
+    "llms_txt_pointer": false
+   },
+   "listing": {
+    "price_floor_ok": true,
+    "seller_named": true,
+    "not_advice_line": false
+   }
+  },
+  {
+   "id": 180,
+   "store_ids": [
+    180
+   ],
+   "shared_prefix": true,
+   "build": {
+    "desc_length": true,
+    "desc_points_llms_txt": false,
+    "brand_prefix_naming": true,
+    "schema_additionalProperties_false": true,
+    "inputs_described": true,
+    "units_ranges_stated": true,
+    "identifier_or_defaults": true
+   },
+   "storefront": {
+    "free_sibling_in_storefront": true,
+    "free_feedback_item": false,
+    "llms_txt_pointer": false
+   },
+   "listing": {
+    "price_floor_ok": true,
+    "seller_named": true,
+    "not_advice_line": false
+   }
+  },
+  {
+   "id": 181,
+   "store_ids": [
+    181,
+    182,
+    183
+   ],
+   "shared_prefix": true,
+   "build": {
+    "desc_length": true,
+    "desc_points_llms_txt": true,
+    "brand_prefix_naming": true,
+    "schema_additionalProperties_false": true,
+    "inputs_described": true,
+    "units_ranges_stated": true,
+    "identifier_or_defaults": true
+   },
+   "storefront": {
+    "free_sibling_in_storefront": true,
+    "free_feedback_item": true,
+    "llms_txt_pointer": true
+   },
+   "listing": {
+    "price_floor_ok": true,
+    "seller_named": true,
+    "not_advice_line": false
+   }
+  },
+  {
+   "id": 182,
+   "store_ids": [
+    181,
+    182,
+    183
+   ],
+   "shared_prefix": true,
+   "build": {
+    "desc_length": true,
+    "desc_points_llms_txt": true,
+    "brand_prefix_naming": true,
+    "schema_additionalProperties_false": true,
+    "inputs_described": true,
+    "units_ranges_stated": true,
+    "identifier_or_defaults": true
+   },
+   "storefront": {
+    "free_sibling_in_storefront": true,
+    "free_feedback_item": true,
+    "llms_txt_pointer": true
+   },
+   "listing": {
+    "price_floor_ok": true,
+    "seller_named": true,
+    "not_advice_line": false
+   }
+  },
+  {
+   "id": 183,
+   "store_ids": [
+    181,
+    182,
+    183
+   ],
+   "shared_prefix": true,
+   "build": {
+    "desc_length": true,
+    "desc_points_llms_txt": true,
+    "brand_prefix_naming": true,
+    "schema_additionalProperties_false": true,
+    "inputs_described": true,
+    "units_ranges_stated": true,
+    "identifier_or_defaults": true
+   },
+   "storefront": {
+    "free_sibling_in_storefront": true,
+    "free_feedback_item": true,
+    "llms_txt_pointer": true
+   },
+   "listing": {
+    "price_floor_ok": true,
+    "seller_named": true,
+    "not_advice_line": false
+   }
+  },
+  {
+   "id": 184,
+   "store_ids": [
+    184
+   ],
+   "shared_prefix": true,
+   "build": {
+    "desc_length": true,
+    "desc_points_llms_txt": false,
+    "brand_prefix_naming": true,
+    "schema_additionalProperties_false": true,
+    "inputs_described": true,
+    "units_ranges_stated": true,
+    "identifier_or_defaults": true
+   },
+   "storefront": {
+    "free_sibling_in_storefront": false,
+    "free_feedback_item": false,
+    "llms_txt_pointer": false
+   },
+   "listing": {
+    "price_floor_ok": true,
+    "seller_named": true,
+    "not_advice_line": false
+   }
+  },
+  {
+   "id": 188,
+   "store_ids": [
+    188,
+    189,
+    191
+   ],
+   "shared_prefix": true,
+   "build": {
+    "desc_length": true,
+    "desc_points_llms_txt": true,
+    "brand_prefix_naming": true,
+    "schema_additionalProperties_false": true,
+    "inputs_described": true,
+    "units_ranges_stated": true,
+    "identifier_or_defaults": true
+   },
+   "storefront": {
+    "free_sibling_in_storefront": true,
+    "free_feedback_item": true,
+    "llms_txt_pointer": true
+   },
+   "listing": {
+    "price_floor_ok": true,
+    "seller_named": true,
+    "not_advice_line": false
+   }
+  },
+  {
+   "id": 189,
+   "store_ids": [
+    188,
+    189,
+    191
+   ],
+   "shared_prefix": true,
+   "build": {
+    "desc_length": true,
+    "desc_points_llms_txt": true,
+    "brand_prefix_naming": true,
+    "schema_additionalProperties_false": true,
+    "inputs_described": true,
+    "units_ranges_stated": true,
+    "identifier_or_defaults": true
+   },
+   "storefront": {
+    "free_sibling_in_storefront": true,
+    "free_feedback_item": true,
+    "llms_txt_pointer": true
+   },
+   "listing": {
+    "price_floor_ok": true,
+    "seller_named": true,
+    "not_advice_line": false
+   }
+  },
+  {
+   "id": 191,
+   "store_ids": [
+    188,
+    189,
+    191
+   ],
+   "shared_prefix": true,
+   "build": {
+    "desc_length": true,
+    "desc_points_llms_txt": true,
+    "brand_prefix_naming": true,
+    "schema_additionalProperties_false": true,
+    "inputs_described": true,
+    "units_ranges_stated": true,
+    "identifier_or_defaults": true
+   },
+   "storefront": {
+    "free_sibling_in_storefront": true,
+    "free_feedback_item": true,
+    "llms_txt_pointer": true
+   },
+   "listing": {
+    "price_floor_ok": true,
+    "seller_named": true,
+    "not_advice_line": false
+   }
+  },
+  {
+   "id": 192,
+   "store_ids": [
+    24,
+    192,
+    193
+   ],
+   "shared_prefix": true,
+   "build": {
+    "desc_length": true,
+    "desc_points_llms_txt": true,
+    "brand_prefix_naming": true,
+    "schema_additionalProperties_false": true,
+    "inputs_described": true,
+    "units_ranges_stated": true,
+    "identifier_or_defaults": true
+   },
+   "storefront": {
+    "free_sibling_in_storefront": true,
+    "free_feedback_item": false,
+    "llms_txt_pointer": true
+   },
+   "listing": {
+    "price_floor_ok": true,
+    "seller_named": true,
+    "not_advice_line": false
+   }
+  },
+  {
+   "id": 193,
+   "store_ids": [
+    24,
+    192,
+    193
+   ],
+   "shared_prefix": true,
+   "build": {
+    "desc_length": true,
+    "desc_points_llms_txt": true,
+    "brand_prefix_naming": true,
+    "schema_additionalProperties_false": true,
+    "inputs_described": true,
+    "units_ranges_stated": true,
+    "identifier_or_defaults": true
+   },
+   "storefront": {
+    "free_sibling_in_storefront": true,
+    "free_feedback_item": false,
+    "llms_txt_pointer": true
+   },
+   "listing": {
+    "price_floor_ok": true,
+    "seller_named": true,
+    "not_advice_line": false
+   }
+  },
+  {
+   "id": 194,
+   "store_ids": [
+    194
+   ],
+   "shared_prefix": true,
+   "build": {
+    "desc_length": true,
+    "desc_points_llms_txt": true,
+    "brand_prefix_naming": true,
+    "schema_additionalProperties_false": true,
+    "inputs_described": true,
+    "units_ranges_stated": true,
+    "identifier_or_defaults": true
+   },
+   "storefront": {
+    "free_sibling_in_storefront": true,
+    "free_feedback_item": true,
+    "llms_txt_pointer": true
+   },
+   "listing": {
+    "price_floor_ok": true,
+    "seller_named": true,
+    "not_advice_line": false
+   }
+  },
+  {
+   "id": 195,
+   "store_ids": [
+    195
+   ],
+   "shared_prefix": true,
+   "build": {
+    "desc_length": true,
+    "desc_points_llms_txt": true,
+    "brand_prefix_naming": true,
+    "schema_additionalProperties_false": false,
+    "inputs_described": false,
+    "units_ranges_stated": true,
+    "identifier_or_defaults": true
+   },
+   "storefront": {
+    "free_sibling_in_storefront": false,
+    "free_feedback_item": false,
+    "llms_txt_pointer": true
+   },
+   "listing": {
+    "price_floor_ok": true,
+    "seller_named": false,
+    "not_advice_line": false
+   }
+  },
+  {
+   "id": 196,
+   "store_ids": [
+    196,
+    197,
+    198,
+    199
+   ],
+   "shared_prefix": true,
+   "build": {
+    "desc_length": true,
+    "desc_points_llms_txt": true,
+    "brand_prefix_naming": true,
+    "schema_additionalProperties_false": true,
+    "inputs_described": true,
+    "units_ranges_stated": true,
+    "identifier_or_defaults": true
+   },
+   "storefront": {
+    "free_sibling_in_storefront": true,
+    "free_feedback_item": true,
+    "llms_txt_pointer": true
+   },
+   "listing": {
+    "price_floor_ok": true,
+    "seller_named": true,
+    "not_advice_line": false
+   }
+  },
+  {
+   "id": 197,
+   "store_ids": [
+    196,
+    197,
+    198,
+    199
+   ],
+   "shared_prefix": true,
+   "build": {
+    "desc_length": true,
+    "desc_points_llms_txt": true,
+    "brand_prefix_naming": true,
+    "schema_additionalProperties_false": true,
+    "inputs_described": true,
+    "units_ranges_stated": true,
+    "identifier_or_defaults": true
+   },
+   "storefront": {
+    "free_sibling_in_storefront": true,
+    "free_feedback_item": true,
+    "llms_txt_pointer": true
+   },
+   "listing": {
+    "price_floor_ok": true,
+    "seller_named": true,
+    "not_advice_line": false
+   }
+  },
+  {
+   "id": 198,
+   "store_ids": [
+    196,
+    197,
+    198,
+    199
+   ],
+   "shared_prefix": true,
+   "build": {
+    "desc_length": true,
+    "desc_points_llms_txt": true,
+    "brand_prefix_naming": true,
+    "schema_additionalProperties_false": true,
+    "inputs_described": true,
+    "units_ranges_stated": true,
+    "identifier_or_defaults": true
+   },
+   "storefront": {
+    "free_sibling_in_storefront": true,
+    "free_feedback_item": true,
+    "llms_txt_pointer": true
+   },
+   "listing": {
+    "price_floor_ok": true,
+    "seller_named": true,
+    "not_advice_line": false
+   }
+  },
+  {
+   "id": 199,
+   "store_ids": [
+    196,
+    197,
+    198,
+    199
+   ],
+   "shared_prefix": true,
+   "build": {
+    "desc_length": true,
+    "desc_points_llms_txt": true,
+    "brand_prefix_naming": true,
+    "schema_additionalProperties_false": true,
+    "inputs_described": true,
+    "units_ranges_stated": true,
+    "identifier_or_defaults": true
+   },
+   "storefront": {
+    "free_sibling_in_storefront": true,
+    "free_feedback_item": true,
+    "llms_txt_pointer": true
+   },
+   "listing": {
+    "price_floor_ok": true,
+    "seller_named": true,
+    "not_advice_line": false
+   }
+  }
+ ]
+}
